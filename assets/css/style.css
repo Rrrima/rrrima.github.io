@@ -159,13 +159,13 @@ img {
 	-user-drag: none;
 }
 
-a,
+/*a,
 a:hover,
 a:active,
 a:focus {
 	text-decoration: none;
 	outline: none;
-}
+}*/
 
 a,
 button,
@@ -196,55 +196,8 @@ p {
 	margin: 0 0 15px;
 }
 
-.clear {
-	clear: both;
-}
-
 img {
 	max-width: 100%;
-}
-
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-	outline: none;
-}
-
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-	background-color: transparent;
-	background-image: none;
-	/*color:#fff;*/
-}
-
-.form-control-label {
-	border-radius: 0px;
-	border: 1px solid #ccc;
-	box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075);
-	width: 100%;
-	height: 50px;
-	/*color:#fff;*/
-}
-
-.form-control-label:focus {
-	border-color: #bcefeb;
-	outline: 0;
-	box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075), 0 0 0px rgba(102, 175, 233, .6);
-	/*color:#fff;*/
 }
 
 h1,
@@ -270,23 +223,14 @@ h2 {
 }
 
 h3 {
-	font-size: 2.1rem;
+	font-size: 1.6rem;
 	line-height: 2.5rem;
 }
 
 h4 {
-	font-size: 1.6rem;
+	font-size: 1rem;
 	line-height: 2.2rem;
 }
-
-h5 {
-	font-size: 1.3rem;
-}
-
-h6 {
-	font-size: 1rem;
-}
-
 
 
 h1 span,
@@ -820,6 +764,7 @@ textarea::-ms-input-placeholder {
 /*heading title all area*/
 
 .head_title {
+	margin-top:8rem;
 	padding-bottom: 3.143rem;
 	overflow: hidden;
 }
@@ -834,7 +779,7 @@ textarea::-ms-input-placeholder {
 .head_title p {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	color: #4a4a4a;
 }
 
@@ -1139,6 +1084,9 @@ Home Section style
 	font-weight: 700;
 	line-height: 6.5rem;
 	color: #666;
+	animation-name: opacity;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -1148,7 +1096,7 @@ Home Section style
 	.home {
 		background-size: 100%;
 	}
-	.main_homw{
+	.main_home{
 		padding-bottom: 10vw;
 	}
 }
@@ -1159,6 +1107,11 @@ Home Section style
 	.home {
 		background-size: 100%;
 	}
+}
+
+@keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
 }
 
 /*
@@ -1183,6 +1136,28 @@ About section style
 }
 #about_img {
 	width: 30%;
+	background-color: transparent;
+	perspective: 1000px;
+	position:relative;
+	top:-16vw;
+}
+.flip_card{
+	  position: relative;
+	  transition: transform 0.8s;
+	  transform-style: preserve-3d;
+}
+#about_img:hover .flip_card {
+  transform: rotateY(180deg);
+}
+
+.fcfront, .fcback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.fcback{
+	transform: rotateY(180deg);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1529,6 +1504,7 @@ Footer Section style
 	opacity: 1;
 }
 
+
 .scrollup i {
 	font-size: 13px;
 	position: absolute;
@@ -1539,8 +1515,8 @@ Footer Section style
 	margin-top: -7px;
 	margin-left: -6px;
 	text-decoration: none;
-
 }
+
 
 /*Modified CSS*/
 

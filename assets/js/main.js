@@ -1,8 +1,5 @@
 "use strict";
 
-//Rage Template
-//Designerd by: http://bootstrapthemes.co
-
 jQuery(document).ready(function ($) {
 
 //for Preloader
@@ -80,63 +77,6 @@ jQuery(document).ready(function ($) {
  
     });
 
-
-
-// slick slider active Home Page Tow
-    $(".testimonial_slid").slick({
-        dots: false,
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        prevArrow: "<i class='fa fa-angle-left nextprevleft'></i>",
-        nextArrow: "<i class='fa fa-angle-right nextprevright'></i>",
-        autoplay: true,
-        autoplaySpeed: 2000
-    });
-
-
-
-//    featured slider
-    $('.featured_slider').slick({
-        centerMode: true,
-        dote: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        speed: 1500,
-        index: 2,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-
-
-
-//---------------------------------------------
-// Counter 
-//---------------------------------------------
-
-    $('.statistic-counter').counterUp({
-        delay: 10,
-        time: 2000
-    });
 
 //---------------------------------------------
 // Scroll Up 
