@@ -1121,6 +1121,7 @@ Home Section style
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
+	background-color: white;
 }
 
 .main_home {
@@ -1212,6 +1213,7 @@ Portfolio section style
 	margin:1.5vw;
 	overflow: hidden;
 	position:relative;
+	background-color: black
 }
 
 #pitem1 {
