@@ -356,18 +356,6 @@ ul {
 	list-style: none;
 }
 
-/*all overlay*/
-
-.overlay {
-	background-color: rgba(51, 51, 51, 0.30);
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-}
-
-
 
 .no-padding {
 	padding: 0 !important;
@@ -1115,25 +1103,33 @@ textarea::-ms-input-placeholder {
 /*
 Nav Menu style
 ==================*/
-.logo_scale{
-	height:50px;
+.logo{
+	height:5vh;
+}
+@media only screen and (max-width: 991px) {
+	.logo{
+		position:relative;
+		top:2vh;
+	}
 }
 /*
 Home Section style
 ==================*/
 
 .home {
-	background: url(../images/background/hello.jpg) no-repeat bottom center;
+	background: url(../images/background/hello.jpg) no-repeat center;
 	background-size: cover;
+	background-attachment: fixed;
 	position: relative;
 }
 
 .main_home {
 	overflow: hidden;
-	padding-top: 310px;
-	padding-bottom: 320px;
+	padding-top: 22vw;
+	padding-top: 22vw;
 	position: relative;
 	z-index: 1;
+	height:100vh;
 }
 
 .home_text h1 {
@@ -1141,9 +1137,28 @@ Home Section style
 	font-size: 4.286rem;
 	font-weight: 700;
 	line-height: 6.5rem;
+	color: #666;
 }
 
-
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+	.home_text h1 {
+		font-size: 2.5rem;
+	}
+	.home {
+		background-size: 100%;
+	}
+	.main_homw{
+		padding-bottom: 10vw;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.home_text h1 {
+		font-size: 3.5rem;
+	}
+	.home {
+		background-size: 100%;
+	}
+}
 
 /*
 About section style
@@ -1245,7 +1260,7 @@ Portfolio section style
 	top: 0%;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.40);
+	background-color: rgba(0, 0, 0, 0.60);
 	padding-top: 12%;
 	padding-left,padding-right: 10px;
 	opacity: 0;
@@ -1479,6 +1494,7 @@ Footer Section style
 
 .main_footer {
 	overflow: hidden;
+	color:white;
 }
 
 .main_footer i {
