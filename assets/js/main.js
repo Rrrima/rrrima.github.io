@@ -39,45 +39,6 @@ jQuery(document).ready(function ($) {
     });
     wow.init();
 
-// magnificPopup
-
-    $('.popup-img').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
-
-    $('.video-link').magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        iframe: {
-  markup: '<div class="mfp-iframe-scaler">'+
-            '<div class="mfp-close"></div>'+
-            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-          '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
-
-  patterns: {
-    youtube: {
-      index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
-
-      id: 'v=', // String that splits URL in a two parts, second part should be %id%
-      // Or null - full URL will be returned
-      // Or a function that should return %id%, for example:
-      // id: function(url) { return 'parsed id'; }
-
-      src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
-    }
-    // you may add here more sources
-
-  },
-
-  srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
-}
- 
-    });
-
-
 //---------------------------------------------
 // Scroll Up 
 //---------------------------------------------
@@ -93,37 +54,6 @@ jQuery(document).ready(function ($) {
         $("html, body").animate({scrollTop: 0}, 1000);
         return false;
     });
-
-
-
-
-
-//About us accordion 
-
-    $("#faq_main_content").collapse({
-        accordion: true,
-        open: function () {
-            this.addClass("open");
-            this.css({height: this.children().outerHeight()});
-        },
-        close: function () {
-            this.css({height: "0px"});
-            this.removeClass("open");
-        }
-    });
-
-
-
-
-
-//Team Skillbar active js
-
-    jQuery('.teamskillbar').each(function () {
-        jQuery(this).find('.teamskillbar-bar').animate({
-            width: jQuery(this).attr('data-percent')
-        }, 6000);
-    });
-
 
 
 //Span Menu toggle

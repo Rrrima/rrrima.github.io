@@ -386,7 +386,7 @@ Button
 	background-color: #4270A3;
 	border: 2px solid;
 	border-color: #4270A3;
-	padding: 1rem 3rem;
+	padding: 1rem;
 	margin-bottom: 1rem;
 }
 
@@ -1430,7 +1430,8 @@ Hobby Section style
 }
 
 .hobby_item:hover .hobby_item_img img {
-	transform: scale(1.1) rotate(2deg);
+	transform: scale(1.2);
+		filter:grayscale(100%);
 }
 
 .hobby_text {
@@ -1452,19 +1453,73 @@ Hobby Section style
 		height:12vw;
 	}
 }
-
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+	.outer_container{
+		width:40%;
+		margin:2vw;
+	}
+	.hobby_container{
+		flex-direction: column;
+		width:100%;
+	}
+	.hobby_text{
+		height:12vw;
+	}
+	.hobby_header{
+		width:100%;
+	}
+	.upper_container{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.hobby_item_img {
+		height:22vw;
+	}
+}
 /*
 Contact Section style
 =====================*/
-
-.main_contact {
+.contact_container{
 	display: flex;
-	flex-basis: 100%;
 	flex-wrap: wrap;
 }
-
+#contact .container{
+	padding-top:8vw;
+	padding-bottom: 8vw
+}
+.main_contact {
+	color:white;
+	width:50%;
+}
+.main_contact p {
+	font-size: 1.2rem;
+}
 .main_contact a.btn {
-	width: 100%;
+	width: 80%;
+}
+.contact_form {
+	width:40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	position: relative;
+	top:-3vw;
+}
+.contact_form input[type=text]{
+	width:100%;
+	height:80%;
+	border-radius: 5px
+
+}
+.contact_form input{
+	border: none;
+	margin:1vw 2vw;
+
+}
+
+.contact_form input[type=submit]{
+	cursor: pointer;
 }
 
 
@@ -1493,6 +1548,18 @@ Contact Section style
 	padding-right: 10px;
 }
 
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+	.main_contact{
+		width: 100%;
+	}
+	.contact_form{
+		width: 100%;
+		top:3vw;
+	}
+	.contact_form input[type=text]{
+	height:25vw
+	}
+}
 /*
 Footer Section style
 =====================*/
