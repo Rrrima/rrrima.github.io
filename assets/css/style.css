@@ -1088,6 +1088,13 @@ Home Section style
 	animation-iteration-count: infinite;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .home_text h1 {
+    animation-duration: 0s;
+  }
+}
+
+
 @media only screen and (min-width: 200px) and (max-width: 767px) {
 	.home_text h1 {
 		font-size: 2.5rem;
@@ -1172,6 +1179,12 @@ About section style
 		display: none;
 	}
 
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .flip_card {
+    transition: transform 0s;
+  }
 }
 
 /*
@@ -1269,6 +1282,16 @@ Portfolio section style
 	flex-direction: column;
 	justify-content: center;
 	padding:36% 10%;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+   .pitem:hover img {
+	transform: none;
+	}
+   .pitem img,.portfolio_hover{
+   	transform: all 0s;
+	}
+
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -1431,7 +1454,7 @@ Hobby Section style
 
 .hobby_item:hover .hobby_item_img img {
 	transform: scale(1.2);
-		filter:grayscale(100%);
+	filter:grayscale(100%);
 }
 
 .hobby_text {
@@ -1443,6 +1466,18 @@ Hobby Section style
 
 .hobby_text p {
 	color: #666666;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+   .hobby_item_img img {
+	transition: none;
+
+	}
+
+	.hobby_item:hover .hobby_item_img img {
+	transform: none;
+	filter:grayscale(0%);
+	}
 }
 
 @media only screen and (min-width: 200px) and (max-width: 768px) {
@@ -1557,7 +1592,7 @@ Contact Section style
 		top:3vw;
 	}
 	.contact_form input[type=text]{
-	height:25vw
+		height:25vw
 	}
 }
 /*
@@ -1593,6 +1628,13 @@ Footer Section style
 	-moz-transition: opacity .5s, background-color .5s;
 	-webkit-transition: opacity .5s, background-color .5s;
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .scrollup {
+    transition:none;
+  }
+}
+
 
 .scrollup:hover {
 	background: #ff6863;
@@ -1721,3 +1763,5 @@ Footer Section style
 		margin-left: 0px;
 	}
 }
+
+
