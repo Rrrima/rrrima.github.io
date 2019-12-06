@@ -42,11 +42,6 @@ jQuery(document).ready(function ($) {
 //---------------------------------------------
 // Scroll Up 
 //---------------------------------------------
-function removeElement(elementSelector) {
-    // Removes an element from the document
-    var element = document.querySelector(elementSelector);
-    element.parentNode.removeChild(element);
-}
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 600) {
@@ -65,13 +60,6 @@ function removeElement(elementSelector) {
 	$(".navbar-header button").on('click', function(){
 		$('.navbar-header button').toggleClass('active');
 	});
-    if (window.matchMedia('(prefers-reduced-motion)')) {
-         removeElement(".scrollup");
-         removeElement("#loading");
-         var x = document.querySelector("#footer p");
-         console.log(x);
-         x.classList.remove("fadeInRight");
-     }
 
   
 
