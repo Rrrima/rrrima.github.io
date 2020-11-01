@@ -112,6 +112,11 @@ section { overflow: hidden; }*/
 	;
 }
 
+.text-gray {
+	color: #555 !important;
+	;
+}
+
 .text-mega {
 	color: #eab0a6 !important;
 	;
@@ -124,6 +129,16 @@ section { overflow: hidden; }*/
 
 .text-black {
 	color: #000 !important;
+}
+
+.bigger {
+	font-size: 18px !important;  
+	line-height: 2 !important;
+}
+
+.med {
+	font-size: 16px !important;  
+	line-height: 1.8 !important;
 }
 
 
@@ -227,11 +242,13 @@ h4 {
 }
 
 h5 {
-	font-size: 1.3rem;
+	font-size: 1.4rem;
+	font-weight: bold
 }
 
 h6 {
-	font-size: 1rem;
+	font-size: 1.2rem;
+	color: #4270A3;
 }
 
 
@@ -244,9 +261,12 @@ h5 span,
 p span {
 	color: #4270A3;
 }
-
+.text-emph{
+	color: #f59382;
+	font-weight: bold
+}
 p {
-	line-height: 1.5rem;
+	line-height: 1.8rem;
 }
 
 p:last-child {
@@ -299,8 +319,26 @@ Section
 
 ul {
 	margin: 0;
-	padding: 0;
+	padding: 20;
+	/*list-style: none;*/
+}
+
+.list-inline-item {
 	list-style: none;
+	padding:0;
+}
+
+i:hover{
+	color:#f59382;
+}
+
+a {
+	color: black;
+	text-decoration: underline;
+}
+
+a:hover {
+	color:#f59382;
 }
 
 /*all overlay*/
@@ -322,7 +360,6 @@ ul {
 	width: 100%;
 	height: 100%;
 }
-
 
 .no-padding {
 	padding: 0 !important;

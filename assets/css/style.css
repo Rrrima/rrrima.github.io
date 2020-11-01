@@ -110,7 +110,9 @@ section { overflow: hidden; }
 
 .text-black {
 	color: #000 !important;
+	 !important ; 
 }
+
 
 .disabled {
 	cursor: not-allowed;
