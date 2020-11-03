@@ -1180,6 +1180,9 @@ About section style
 /*
 Portfolio section style
 ========================*/
+#portfolio{
+	margin-bottom:100px;
+}
 #port_container {
 	display: grid;
 	grid-template-columns: 9vw 1fr 1fr 1fr 9vw;
@@ -1406,6 +1409,9 @@ Portfolio section style
 /*
 Hobby Section style
 =====================*/
+#hobby{
+	margin-bottom: 150px
+}
 .hobby_container{
 	display: flex;
 }
@@ -1787,12 +1793,23 @@ Footer Section style
 
 
 #recent {
-	margin-top:100px;
+	margin-top:150px;
+	margin-bottom: 150px
 }
 
 #about_img{
 	position:relative;
-	top:-180px;
+	top:0;
+}
+
+a {
+	color: #4270A3;
+	font-weight: bold
+}
+
+a:hover {
+	color:#f59382;
+	text-decoration: underline;
 }
 
 
