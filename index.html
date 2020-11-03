@@ -40,6 +40,7 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 
 		<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		<script src="https://kit.fontawesome.com/9b30ae05d8.js" crossorigin="anonymous"></script>
 	</head>
 	<body data-target=".navbar-collapse">
 		<!-- Preloader -->
@@ -101,24 +102,25 @@
 			<!--End off Home Sections-->
 
 			<!--About Sections-->
-			<!-- <section id="about" class="about roomy-100">
+			<section id="about" class="about roomy-100">
 				<div class="container">
 					<div id="main_about">
 						<div id ="about_header">
 							<h2>ABOUT ME</h2>
 							<div class="separator_left"></div>
 						</div>
-						<div id ="about_content">
-							<p>I am Rima, a master student in School of Information, University of Michigan, Ann Arbor. </p>
-							<p>I graduated from Tsinghua University, China. Currently, I major in Big Data Analysis but also fancy design and front-end developing.</p>
-							<p>With keen observations and a dynamic mind, I am always seeking for challenging things and beauty around me. I have 8 patents and several exchange experiences including my summer intern at Carnegie Mellon University.</p> 
-							<p>While interested in algorithms and data analysis, I am also a big fan of design. I am capable of using photoshop, aftereffects, sketch, 3DsMax and AutoCAD.</p> 
-							<p>My research interest including ubiquitous computing, user interface</p>
+						<div id ="about_content" class = 'text-black'>
+							<p>Hi, I am Rima (Yining) Cao!  </p>
+
+							<p>I got my bachelor's degree from Tsinghua University, China. Currently I am a master student at University of Michigan, Ann Arbor, majoring in Data Analasis and Human-Computer Interaction. I am  </p>
+
+							<p>My research interest lies in the intersection of Human-Computer Interaction, Computer Vision and Data Mining. I am interested in building intelligent interactive system and data-driven modeling.</p> 
+							
 						</div>
 						<div id="about_img">
 							<div class= "flip_card">
 								<a class="fcfront" href="" aria-label="flip to another photo">
-									<img src="assets/images/me1.jpg" alt="my portrait 1">
+									<img src="assets/images/me1.png" alt="my portrait 1">
 								</a>
 							</div>
 							<div class= "flip_card" href="" aria-label="flip to another photo">
@@ -128,17 +130,55 @@
 							</div>
 						</div>
 					</div>
-				</div> -->
+				</div>
 				<!--End off container -->
 			<!-- </section> -->
 			<!--End off About section -->
+
+			<section id="recent">
+				<div class="row">
+					<div class="col-md-8 mr-md-auto ml-md-auto">
+						<div class="head_title text-center">
+							<h2 class="text-black">Recent Research</h2>
+							<div class="separator_auto"></div>
+							<p class="text-black">Check out my recent research works and projects here! </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				<div class="col-md-8 mr-md-auto ml-md-auto">
+					<div class="row">
+						<div class="col-md-4 mr-md-auto ml-md-auto recent-img">
+							<img src="assets/images/recent/vs.png">
+						</div>
+						<div class="col-md-8 mr-md-auto ml-md-auto">
+							<div class="recent-title">
+								<h4>VideoSticker : A Tool for Active Visual Note-taking and Annotation</h4>
+							</div>
+							<div class="recent-des">
+							<p class='text-gray caption'>
+								Jan,2020 - Now, advised by professor Eytan Adar
+							</p>
+							<p class='text-black'>We propose VideoStickers , a tool for supporting graphical note-taking from videos. VideoStickers utilizes object detection and tracking and linking to narratives to allow the viewer to quickly `collect' a sticker and integrate the content into motion graphical notes.</p>
+							</div>
+							<div class="widget_recent">
+								<ul class="list-inline-item">
+									<li><a href="videosticker.html"><i class="fas fa-search"></i></a></li>
+									<li><a href="assets/vs-share-version.pdf"><i class="fas fa-file-pdf"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</section>
 
 			<!--Portfolio Section-->
 			<section id="portfolio">
 				<div class="row">
 					<div class="col-md-8 mr-md-auto ml-md-auto">
 						<div class="head_title text-center">
-							<h2 class="text-black">PORTFOLIO</h2>
+							<h2 class="text-black">More projects</h2>
 							<div class="separator_auto"></div>
 							<p class="text-black">Most of my works combines programming, designing and statistical analysis.  </p>
 						</div>
@@ -149,11 +189,11 @@
 						<img src="assets/images/Portfolio/melodyflow.png" alt="MelodyFlow" />
 						<div class="portfolio_hover text-center">
 							<div class="inner_container">
-								<p class="text-uppercase text-white">Melody Flow</p>
-								<p class="text-white">Using RNN to generate music of different genres</p>
+								<p class="text-uppercase text-white">Super Musician</p>
+								<p class="text-white">Music Style Transfer Based on AutoEncoder</p>
 								<div class="portfolio_hover_icon">
-									<a href="assets/images/Portfolio/melodyflow.png" class="popup-img" aria-label="open image"><i class="fa fa-expand" aria-hidden="true"></i></a>
-									<a href="melodyflow.html" aria-label="link to page"><i class="fa fa-search" aria-hidden="true"></i></a>
+									<a href="pdf/supermusician.pdf" class="popup-img" aria-label="open image"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>
+									<a href="https://medium.com/@rimacyn_23654/super-musician-music-style-transfer-based-on-autoencoder-60d56d85e398" aria-label="link to page"><i class="fab fa-medium"></i></a>
 								</div>
 							</div>
 						</div>
@@ -162,24 +202,23 @@
 						<img src="assets/images/Portfolio/solar.png" alt="Solar" />
 						<div class="portfolio_hover text-center">
 							<div class="inner_container">
-								<p class="text-uppercase text-white">Solar</p>
-								<p class="text-white">Investigation into the solar energy usage pattern in China</p>
+								<p class="text-uppercase text-white">Auto-highlighter</p>
+								<p class="text-white">Extractive text summarization with sequence-to-sequence model</p>
 								<div class="portfolio_hover_icon">
-									<a href="assets/images/Portfolio/solar.png" class="popup-img" aria-label="open image"><i class="fa fa-expand" aria-hidden="true"></i></a>
-									<a href="solar.html" aria-label="link to page"><i class="fa fa-search" aria-hidden="true"></i></a>
+									<a href="pdf/autohighliter.pdf" class="popup-img" aria-label="open image"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>
+									<a href="https://medium.com/@rimacyn_23654/auto-highlighter-extractive-text-summarization-with-sequence-to-sequence-model-cbbf333772bf" aria-label="link to page"><i class="fab fa-medium"></i></a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div id = "pitem3" class="pitem">
-						<img src="assets/images/Portfolio/airmap.png" alt="AirMap" />
+						<img src="assets/images/Portfolio/winter.png" alt="AirMap" />
 						<div class="portfolio_hover text-center">
 							<div class="inner_container3">
-								<p class="text-uppercase text-white">AirMap</p>
-								<p class="text-white">Extracting features for air quality prediction with high-dimensional geographic data.</p>
+								<p class="text-uppercase text-white">Visualization for Winter Olympics</p>
+								<p class="text-white">This the blog for developing communicative visualization to show the who's the winner for winter olympics</p>
 								<div class="portfolio_hover_icon">
-									<a href="assets/images/Portfolio/airmap.png" class="popup-img" aria-label="open image"><i class="fa fa-expand" aria-hidden="true"></i></a>
-									<a href="airmap.html" aria-label="link to page"><i class="fa fa-search" aria-hidden="true"></i></a>
+									<a href="winterolympic.html" aria-label="link to page"><i class="fa fa-search" aria-hidden="true"></i></a>
 								</div>
 							</div>
 						</div>
@@ -191,21 +230,20 @@
 								<p class="text-uppercase text-white">MoTurk</p>
 								<p class="text-white">A personal mobile data trasaction platform</p>
 								<div class="portfolio_hover_icon">
-									<a href="assets/images/Portfolio/moturk.png" class="popup-img" aria-label="open image"><i class="fa fa-expand" aria-hidden="true"></i></a>
+									<a href="pdf/moturk.pdf" class="popup-img" aria-label="open image"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>
 									<a href="moturk.html" aria-label="link to page"><i class="fa fa-search" aria-hidden="true"></i></a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div id = "pitem5" class="pitem">
-						<img src="assets/images/Portfolio/gene.png" alt="Gene" />
+						<img src="assets/images/Portfolio/jumpfun.png" alt="Gene" />
 						<div class="portfolio_hover text-center">
 							<div class="inner_container">
-								<p class="text-uppercase text-white">Biogene</p>
-								<p class="text-white">Extracting features through gene code.</p>
+								<p class="text-uppercase text-white">Jumping Fun</p>
+								<p class="text-white">A website game developed by three.Js</p>
 								<div class="portfolio_hover_icon">
-									<a href="assets/images/Portfolio/gene.png" class="popup-img" aria-label="open image"><i class="fa fa-expand" aria-hidden="true"></i></a>
-									<a href="biogene.html" aria-label="link to page"><i class="fa fa-search" aria-hidden="true"></i></a>
+									<a href="https://rrrima.github.io/JumpingFun/" aria-label="link to page"><i class="fas fa-gamepad"></i></a>
 								</div>
 							</div>
 						</div>
@@ -217,7 +255,6 @@
 								<p class="text-uppercase text-white">INTELLIGENT STROLLER</p>
 								<p class="text-white">An intelligent stroller with environmental protection and security anti-theft function.</p>
 								<div class="portfolio_hover_icon">
-									<a href="assets/images/Portfolio/baby.png" class="popup-img" aria-label="open image"><i class="fa fa-expand" aria-hidden="true"></i></a>
 									<a href="stroller.html" aria-label="link to page"><i class="fa fa-search" aria-hidden="true"></i></a>
 								</div>
 							</div>
@@ -249,11 +286,11 @@
 							<div class="hobby_container">
 								<div class="hobby_item">
 									<div class="hobby_item_img">
-										<img src="assets/images/Blog/1.jpg" alt="" />
+										<img src="assets/images/Blog/1.png" alt="" />
 									</div>
 									<div class="hobby_text">
-										<h4>Moscow for RISE Association</h4>
-										<p>October, 2016</p>
+										<h4>Draw a popular science brochure</h4>
+										<p>October, 2018</p>
 									</div>
 								</div>
 								<div class="hobby_item">
@@ -261,7 +298,7 @@
 										<img src="assets/images/Blog/2.jpg" alt="" />
 									</div>
 									<div class="hobby_text">
-										<h4>3D Tsinghua</h4>
+										<h4>3D Tsinghua C4D Modeling</h4>
 										<p> October, 2016</p>
 									</div>
 								</div>
@@ -270,7 +307,7 @@
 										<img src="assets/images/Blog/3.jpg" alt="" />
 									</div>
 									<div class="hobby_text">
-										<h4>Dynamic Poster</h4>
+										<h4>Motion Poster for Spring Festival</h4>
 										<p>Janurary, 2018</p>
 									</div>
 								</div>

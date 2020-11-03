@@ -230,7 +230,7 @@ h3 {
 }
 
 h4 {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	line-height: 2.2rem;
 }
 
@@ -1161,6 +1161,7 @@ About section style
 	transform: rotateY(180deg);
 }
 
+
 @media only screen and (max-width: 1024px) {
 	#about_content {
 		width: 60%;
@@ -1433,7 +1434,6 @@ Hobby Section style
 
 .hobby_item:hover .hobby_item_img img {
 	transform: scale(1.2);
-		filter:grayscale(100%);
 }
 
 .hobby_text {
@@ -1723,3 +1723,78 @@ Footer Section style
 		margin-left: 0px;
 	}
 }
+
+
+
+/*style for recent works*/
+.recent-title{
+	border-bottom: #4270A3 solid 1px;
+}
+.recent-img {
+/*	border-left: #F7CBC4 solid 1px;*/
+}
+.recent-des {
+	font-size: 1.1rem;
+	padding: 10px 0px;
+	/*background-color: rgba(66, 111, 163,0.1);*/
+	color:'black';
+	border-radius:10px;
+	height:160px;
+}
+
+.recent-des p {
+	line-height: 2;
+}
+.recent-des .caption{
+	font-size:1rem;
+	line-height: 0;
+	position:relative;
+	top:3px;
+	color:gray;
+}
+
+.widget_recent {
+	position:absolute;
+	right:20px;
+	bottom:20px;
+}
+
+.widget_recent ul li a i {
+	background-color: #4270A3;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+	text-align: center;
+	color: #fff;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.widget_recent ul li a:hover i {
+	background-color: rgba(66, 111, 163,0.1);
+	color:#4270A3
+}
+
+
+.widget_recent li {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+
+#recent {
+	margin-top:100px;
+}
+
+#about_img{
+	position:relative;
+	top:-180px;
+}
+
+
+
+

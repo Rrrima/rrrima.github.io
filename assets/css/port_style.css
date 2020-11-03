@@ -1382,3 +1382,26 @@ Video Section style
 		margin-left: 0px;
 	}
 }
+
+.gif-container{
+	margin-left:18%;
+}
+.gif-container img{
+	width:600px;
+}
+
+
+
+/*style for recent works*/
+.recent-container{
+	border: black solid 2px;
+	min-height: 300px
+}
+
+
+
+
+
+
+
+
