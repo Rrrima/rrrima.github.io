@@ -324,7 +324,7 @@
 									</div>
 								</div>
 								</br>
-								<p class="text-center">The final visualization solution looks like this:</p>
+								<p class="text-center">The next version visualization solution looks like this:</p>
 								<div class="row">
 									<div class="col-md-1">
 									</div>
@@ -334,6 +334,26 @@
 									<div class="col-md-1">
 									</div>
 								</div>
+								</br>
+								</br>
+                            </div>	
+                            <div class="text-left text-black med">
+								<h6>Version TWO: Change dimension again</h6>
+								<div class="row">
+									</br>
+									<div class="col-sm-12 mr-sm-auto ml-sm-auto">
+									<p> One problem with the current bubble plot is that the bubbles overlapped with each other! Because it is very likely that differrent athletes have wined both the same number of gold medals and total medals. 		
+									</p>
+									</div>
+									<div class="col-sm-12 mr-sm-auto ml-sm-auto">
+									<p> Another the interesting dimension is the time. Are there more decorated athletes in recent years or in the past? Thus I add time to the axis and make the graph looks like this:
+									</p>
+									</div>
+									<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+										<img src="assets/images/Portfolio/olympics/s2v3.png">
+									</div>
+								</div>
+								</br>
                             </div>	
                             <div class="col-sm-10 mr-sm-auto ml-sm-auto">
 									<div class="conclusion text-center">
@@ -412,17 +432,32 @@
 									<div class="col-md-1">
 									</div>
 								</div>
+								</br>
+								</br>
+							</div>
+							<div class="text-left text-black med">
+								<h6>Version Final: Small multiples</h6>
+                            	<p>Add pie chart for each countries showing the overall percentage of medals wined in each sports. Visualize as small multiples to allow easy comparison between different countries.</p>
+                            	<div class="row">
+									<div class="col-md-1">
+									</div>
+									<div class="col-sm-12 mr-sm-auto ml-sm-auto">
+										<img src="assets/images/Portfolio/olympics/s3v4.png">
+									</div>
+									<div class="col-md-1">
+									</div>
+								</div>
 								<div class="col-sm-10 mr-sm-auto ml-sm-auto">
 									<div class="conclusion text-center">
 										<p>The final solution answer use a bar chart to let the users know the countries win the most to least medals from 1924-2014. The heatmap shows the total medals wined in each discipline by different countries.</br>
-										For the top 20 countries, we have a circular layout to show the trend of medals wined in each discipline over time. Different from using the time slider, this graphs positioning information slices for comparison within the eyespan. </p>
+										For the top 20 countries, we have a circular layout to show the trend of medals wined in each discipline over time. Different from using the time slider, this graphs positioning information slices for comparison within the eyespan.</br>
+										Also, with the last small multiple visualization, viewers can easily compare the between different countries.
+										 </p>
 									</div>
 									</br>
 									</br>
 								</div>
-
 							</div>
-						</div>
 
 				</div>
 				<!--End off row-->
@@ -430,6 +465,124 @@
 			<br />
 			<br />
 			<!-- end of visualization design -->
+
+			<!-- interactivity -->
+			<div class="container">
+				<div class="row">
+					<div class="main_skill">
+					<!-- title -->
+					<div class="col-md-12">
+						<div class="skill_content wow fadeIn">
+							<h4>Interactivity</h4>
+							<div class="separator_left"></div>
+						</div>
+					</div>
+					<!-- interaction 1 -->
+					<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+						<h5>Score calculation</h5>
+						<div class="text-left text-black med">
+							<p>The score is calculated based on the number of Gold, Silver and Bronze medals, thus we need to find a way to weigh over these three numbers. </br>Initially, I was thinking of using the square with a square widget with a red dot to move around. However, it is hard to implement in <Span>Streamlit</Span>. Thus I choose two sliders to make the interaction:</p>
+						</div>
+						<div class="row">
+							<div class="col-md-1">
+							</div>
+							<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+								<img src="assets/images/Portfolio/olympics/i1.png">
+							</div>
+							<div class="col-md-1">
+							</div>
+						</div>
+						</br>
+						</br>
+					</div>
+					<!-- end of interaction 1 -->
+					<!-- interaction 2 -->
+					<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+						<h5>Score calculation</h5>
+						<div class="text-left text-black med">
+							<p>For the visualization of the relationship between medal score and gdp, I implement a time slider to allow the viewers to specify their time of interest and showing them the change over time.</p>
+						</div>
+						<div class="row">
+							<div class="col-md-1">
+							</div>
+							<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+								<img src="assets/images/Portfolio/olympics/i2.png">
+							</div>
+							<div class="col-md-1">
+							</div>
+						</div>
+						</br>
+						</br>
+					</div>
+					<!-- end of interaction 2 -->
+					<!-- interaction 3 -->
+					<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+						<h5>Interact with the circulr chart</h5>
+						<div class="text-left text-black med">
+							<p>For the circular chart, we allow the viewers to choose the country they are interested with a drop-down box. Besides the tooltips when hover over each item, there will be cross lines to help locate the year and discipline.</p>
+						</div>
+						<div class="row">
+							<div class="col-md-1">
+							</div>
+							<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+								<img src="assets/images/Portfolio/olympics/i3.png">
+							</div>
+							<div class="col-md-1">
+							</div>
+						</div>
+						</br>
+						</br>
+					</div>
+					<!-- end of interaction 3 -->
+					<!-- interaction 3 -->
+					<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+						<h5>Interaction for small multiples</h5>
+						<div class="text-left text-black med">
+							<p>For the small multiple pie charts. I facilitate the comparison between the TOP6 countries by: (1) Allow clicking to select/deselect certain sports by legend; (2) Hover legend to show the corresponding slices simultaneously</p>
+						</div>
+						<div class="row">
+							<div class="col-md-1">
+							</div>
+							<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+								<img src="assets/images/Portfolio/olympics/i4.png">
+							</div>
+							<div class="col-md-1">
+							</div>
+						</div>
+						</br>
+						</br>
+					</div>
+					<!-- end of interaction 3 -->
+					<!-- interaction 3 -->
+					<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+						<h5>Tooltips for detailed information</h5>
+						<div class="text-left text-black med">
+							<p>For each of the visualization, I add tooltips to each items. Thus when viwers hover over the item, they can see the detailed information in the text form. </p>
+						</div>
+						<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+								<div class="conclusion text-center med">
+									<p>Here are just some examples: </p>
+								</div>
+						</div>			
+						<div class="row">
+							<div class="col-md-1">
+							</div>
+							<div class="col-sm-12 mr-sm-auto ml-sm-auto">
+								<img src="assets/images/Portfolio/olympics/i5.png">
+							</div>
+							<div class="col-md-1">
+							</div>
+						</div>
+						</br>
+						</br>
+					</div>
+					<!-- end of interaction 3 -->
+
+					</div>
+				</div>
+			</div>
+			<br />
+			<br />
 
 			<!-- product design -->
 			<div class="container">
@@ -504,7 +657,7 @@
 				<div class="row">
 					<div class="main_skill">
 						<!--words-->
-						<div class="col-md-6">
+						<div class="col-md-12">
 							<div class="skill_content wow fadeIn">
 								<h4>The static version: a poster </h4>
 								<div class="separator_left"></div>
@@ -548,12 +701,18 @@
 						</div>
 						<!--conclusion-->
 						<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+							<div class="text-left text-black med">
+							<p> I built up the communicative visualization with the <a href="https://www.streamlit.io/">Streamlit</a> framework. The interactive charts are made with <a href="https://echarts.apache.org/en/index.html">ECharts</a> and <a href="https://plotly.com/python/">Plotly.</a></p> You can find the source code in the github link at the bottom of the page ;）
+						</div>
+						</div>
+
+						<div class="col-sm-10 mr-sm-auto ml-sm-auto">
 								<div class="conclusion text-center med">
-									<p>Still coding !</p>
+									<p>Here it is: </p>
 								</div>
 						</div>					
 						<!--2 big pictureS-->
-						<div class="row">
+						<!-- <div class="row">
 							<div class="col-md-1">
 							</div>
 							<div class="col-sm-4 mr-sm-auto ml-sm-auto">
@@ -561,7 +720,7 @@
 							</div>
 							<div class="col-md-1">
 							</div>
-						</div>
+						</div> -->
 						
 					</div>
 				</div>
