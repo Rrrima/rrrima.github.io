@@ -134,9 +134,9 @@
 								<h4>Introduction</h4>
 								<div class="separator_left"></div>
 								<p class="text-black med">
-								Videos are an effective tool for knowledge sharing. Unlike linear text in which learners need to mentally connect concepts one line at a time, videos offer an integrated graphic representation of objects and relationships over space and time. For instance, students can watch different transformations throughout the metamorphosis of a butterfly. They can visually see interactions in complex processes such as protein formation:
+								Videos are an effective tool for knowledge sharing. Unlike linear text in which learners need to mentally connect concepts one line at a time, videos offer an integrated graphic representation of objects and relationships over space and time. For instance, students can watch different transformations throughout the metamorphosis of a butterfly. 
 								</p>
-								<div class="row">
+								<!-- <div class="row">
 										<div class="col-md-1">
 										</div>
 										<div class="col-sm-6 mr-sm-auto ml-sm-auto">
@@ -144,14 +144,14 @@
 										</div>
 										<div class="col-md-1">
 										</div>
-								</div>
+								</div> -->
 								<p class="text-black med">
 									</br>
 								Such graphical representations have been demonstrated to support dual coding and improve recall. These representations are also more aligned with the representation used in the video. That is, capturing a graphical image (e.g., of a cell in a video of mitosis) in the notes that corresponds to the representation in the video can enhance retention and provide a useful study tool. </br></br>
 
 								However, a challenge is that learners can find it difficult to take notes from video content. To engage in effective note-taking, they need to be able to recruit individual objects (e.g., sun) from videos, write down their understanding about the relationships between those objects, and correctly record event sequences over time, etc. Current practices require repeatedly pausing and rewinding videos, taking static screenshots of individual video frames,  and manually transcribe narration. All of this increases the time and effort required for note-taking and makes learning from videos less effective. </br></br>
 
-								We propose <span>VideoStickers</span> , a tool for supporting graphical note-taking from videos. VideoStickers utilizes object detection and tracking and linking to narratives to allow the viewer to quickly `collect' a sticker and integrate the content into motion graphical notes. </br></br>
+								We propose <span>VideoStickers</span> , a tool designed to support visual note-taking by extracting expressive content and narratives from videos as stickers.  </br></br>
 								</p>
 								<div class="row">
 										<div class="col-md-1">
@@ -162,6 +162,8 @@
 										<div class="col-md-1">
 										</div>
 								</div>
+
+								Note-taking using <b>VideoStickers</b>: While watching the video about Phases of the Moon, the viewer <b>(a)</b> first captures the video frame for 'new-moon' as a frame sticker. Later the viewer <b>(b)</b>  extracts frame objects for Earth and Moon as object stickers, and <b>(c)</b>  expands the object sticker for the revolution of the moon around the earth and annotates key phases.
 
 							</div>
 						</div>
@@ -186,19 +188,29 @@
 							</div>
 							<div class="col-sm-10 mr-sm-auto ml-sm-auto">
 								<p class="text-black med">
-									The general process of using VideoStickers is, as a notetaking tool for video watching: <span>Select Sticker -> Edit Sticker -> Take Notes</span>, as shown in the above graph. </br>
-									More specifically, the system tackles with several pain points in user's learning experience from videos and proposed specific functions: 
+									We propose a two-pass approach allows viewers to capture high-level information uninterrupted and later extract specific details. </br></br>
+									<span class="text-black"><b> Active Viewing </b></span> </br>
+									Users can use the <span>frame marker</span> button to quickly capture salient points in the video while viewing. When click on the frame marker button, VideoSticker generates a <span>frame-sticker</span>, capturing a screenshot of the current frame, and adds it to the diagram canvas. </br></br>
+									<span class="text-black"><b> Visual Note-taking </b></span> </br>
+									In this stage, users extract elements from videos and integrate them into coherent notes. The whole process breaks down in following steps:
 								<ul class ="med">
-								  <li>Concept Capturing:  <p class="text-black">Encode video content into separate lightweight 'motion stickers' with various dimensions including content(region, contour, transformations), spatial arrangement(motion path, potential interaction) and timing of animation(duration,speed).  </p></li>
-								  <li>Text Association:  <p class="text-black">Suggest labels and relate transcriptions to specific stickers. </p></li>
-								  <li>Interest Point Detection:  <p class="text-black">Suggest labels and relate transcriptions to specific stickers. </p></li>
-								  <li>Annotation:  <p class="text-black">Allow users to mark the timeline with Frame of Interest and customize text on top of the stickers. </p></li>
-								  <li>Navigation:  <p class="text-black"> Easily trace back to video context with certain stickers. </p></li>
+								  <li>Navigate to Point  <p class="text-black"> By clicking on the pointer button associated with the frame sticker, the video player navigates to the corresponding point in the video. Alternately, VideoSticker offers the flexibility to bring up stickers on any frame by simply pausing the video on that frame.  </p></li>
+								  <li>Sticker Extraction  <p class="text-black"> As shown in <b>(h)</b>, object stickers are overlaid directly on top of the media player. When the user clicks on the desired sticker object (in case a frame has multiple stickers) to bring up a local time bar with start-end time ranges for the duration of the video the object is visible. Further, to facilitate sticker extraction, VideoSticker automatically detects <span>interest points</span> such as collision displayed as markers on the local timeline.Once satisfied, the user can click on the add sticker button, which adds it to the diagram canvas. </p></li>
+								  <li>Sticker Editing  <p class="text-black"> On the diagram canvas, user can edit the label and text for the object sticker by double-clicking on the sticker to rigger an editting panel as shown in <b>(j)</b>. </p></li>
+								  <li>Frame-by-frame view  <p class="text-black"> VideoSticker offers frame-level control over object stickers to allow flexible note-taking. By clicking on the sticker expand button, user can bring up visuals for individual frames composing the object sticker <b>(k)</b>. User can adjust the span of all frames along the x axis and the frame interval with the sliders. </p></li>
+								  <li>Navigation:  <p class="text-black"> Easily trace back to video context by double-clicking stickers. </p></li>
 								  <li>Diagramming: <p class="text-black">Provide an interface for diagramming over stickers. </p></li>
 								</ul>
-								A more detailed description of the uer experience is avaible in the pdf file. Check it out 
-
 								</p>
+								<div class="row">
+										<div class="col-md-1">
+										</div>
+										<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+											<img src="assets/images/Portfolio/videostickers/interface.png">
+										</div>
+										<div class="col-md-1">
+										</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -230,27 +242,23 @@
 									<p> For educational movies, learners will first generated sticker notes with labels and related narrations. Then diagram over the motion graphics to create a comprehensive diagram that connects the concepts shown in the stickers.  Here is an example for a video introduce the  <a href="https://www.youtube.com/watch?v=udFxKZRyQt4&t=320s">neutron stars</a>. 
                                     </br>
                                 	</p>
-                                	<p class="text-center text-emph">
-									A bunch of motion stickers generated after watching the video:
-									</p>
-                                	<div class="row">
-										<div class="col-md-1">
-										</div>
-										<div class="col-sm-10 mr-sm-auto ml-sm-auto">
-											<img src="assets/images/Portfolio/videostickers/stickers.png">
-										</div>
-										<div class="col-md-1">
-										</div>
-									</div>
+                         
 									<p class="text-center text-emph">
 									</br>
-									With them, let's generate a diagram:
+									Let's generate a diagram:
 									</p>
 									<div class="row">
 										<div class="col-md-1">
 										</div>
 										<div class="col-sm-10 mr-sm-auto ml-sm-auto">
 											<img src="assets/images/Portfolio/videostickers/diagram.gif">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-1">
+										</div>
+										<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+											<img src="assets/images/Portfolio/videostickers/scenarios1.png">
 										</div>
 									</div>
                                 	</br>
@@ -267,18 +275,18 @@
 											</br>
 									</p>
 									<p class="text-center text-emph">
-										Give you a whole view !
+										And more!
 									</p>
 								<div class="row">
 										<div class="col-md-1">
 										</div>
 										<div class="col-sm-12 mr-sm-auto ml-sm-auto">
-											<img src="assets/images/Portfolio/videostickers/applications.png">
+											<img src="assets/images/Portfolio/videostickers/scenarios.png">
 										</div>
 										<div class="col-md-1">
 										</div>
 								</div>
-								<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+								<!-- <div class="col-sm-10 mr-sm-auto ml-sm-auto">
 										<div class="conclusion text-center">
 											<p>(a) education (b) instructional (c) entertainment
 											</p>
@@ -286,6 +294,7 @@
 										</br>
 										</br>
 								</div>
+								 -->
 							</div>
 						</div>
 
@@ -327,14 +336,14 @@
 									<div class="col-md-1">
 									</div>
 							</div>
-							<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+							<!-- <div class="col-sm-10 mr-sm-auto ml-sm-auto">
 								<div class="conclusion text-center">
 									<p>(a) Content (b) Spatial (c) Timing
 									</p>
 								</div>
 								</br>
 								</br>
-							</div>
+							</div> -->
                    
                         
 						</div>
@@ -360,7 +369,12 @@
 						<!--conclusion-->
 						<div class="col-sm-10 mr-sm-auto ml-sm-auto">
 								<div class="text-black med">
-									<p>The VideoStickers implements a <span>zero-shot object detection</span> algorithm based on salent object detection. We adapt the salency map generation network from the work <a href="https://github.com/backseason/PoolNet">PoolNet</a>. The detection algorithm schema is shown below: </p>
+									<p>The system architecture: </p>
+									<div class="col-sm-12 mr-sm-auto ml-sm-auto">
+										<img src="assets/images/Portfolio/videostickers/architecture.png">
+									</div>
+
+									<p></br>The VideoStickers implements a <span>zero-shot object detection</span> algorithm based on salent object detection. We adapt the salency map generation network from the work <a href="https://github.com/backseason/PoolNet">PoolNet</a>. The detection algorithm schema is shown below: </p>
 									<div class="col-sm-10 mr-sm-auto ml-sm-auto">
 										<img src="assets/images/Portfolio/videostickers/network.png">
 									</div>
@@ -390,18 +404,18 @@
 						<!--words-->
 						<div class="col-md-6">
 							<div class="skill_content wow fadeIn">
-								<h4>The system: </h4>
+								<h4>The system video </h4>
 								<div class="separator_left"></div>
 							</div>
 						</div>
 						<!--conclusion-->
-						<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+					<!-- 	<div class="col-sm-10 mr-sm-auto ml-sm-auto">
 								<div class="conclusion text-center med">
 									<p>We are still adding features to it !</p>
 								</div>
-						</div>					
+						</div> -->					
 						<!--2 big pictureS-->
-						<div class="row">
+						<!-- <div class="row">
 							<div class="col-md-1">
 							</div>
 							<div class="col-sm-4 mr-sm-auto ml-sm-auto">
@@ -422,7 +436,14 @@
 								<div class="gif-container">
 									<img src="assets/images/Portfolio/videostickers/sample-clip.gif">
 								</div>
-						</div>			
+						</div>			 -->
+						<div class="col-sm-10 mr-sm-auto ml-sm-auto">
+							<div style = "padding-left:13%">
+							<iframe width="750" height="420"
+							src="https://www.youtube.com/embed/gWujhr56yKA">
+							</iframe>
+							</div>
+						</div>
 						
 					</div>
 				</div>
