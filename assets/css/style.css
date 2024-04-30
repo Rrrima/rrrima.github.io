@@ -1038,14 +1038,14 @@ Home Section style
 }
 
 .home_text h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Alegreya", serif;
   font-size: 4.286rem;
   font-weight: 700;
   line-height: 6.5rem;
   color: #666;
-  animation-name: opacity;
+  /* animation-name: opacity;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -1759,4 +1759,31 @@ a:hover {
 
 .research {
   margin-bottom: 40px;
+}
+
+/* new version */
+.widget_home_sociallinks ul li a i {
+  background-color: #cfcfcf48;
+  line-height: 40px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  color: #4270a3;
+  /* color: #1a1a1a; */
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.widget_home_sociallinks ul li a:hover i {
+  background-color: #4270a3;
+  color: white;
+}
+
+.widget_home_sociallinks li {
+  display: inline-block;
+  padding-right: 25px;
 }
