@@ -1630,6 +1630,13 @@ Footer Section style
 
 .navbar-nav {
   font-family: "Source Sans 3", sans-serif;
+  font-size: 1.15rem;
+}
+
+.navbar-nav a:hover {
+  color: orange !important;
+  outline: none !important;
+  text-decoration: none !important;
 }
 
 .navbar-header button:focus {
@@ -1811,4 +1818,18 @@ a:hover {
   padding: 3px 10px;
   margin-right: 10px;
   border-radius: 8px;
+}
+.authorlist {
+  font-size: 1.2rem;
+  font-family: "Source Sans 3", sans-serif;
+  color: #1a1a1a;
+  font-weight: 300;
+}
+
+.text-bold {
+  font-weight: 600;
+  color: #4270a3;
+}
+.cv {
+  background-color: #4270a3 !important;
 }
