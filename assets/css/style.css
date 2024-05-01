@@ -324,9 +324,9 @@ Separator
 */
 
 .separator_left {
-  width: 85px;
-  height: 2px;
-  margin: 20px 0px;
+  width: 130px;
+  height: 4px;
+  margin: 10px 0px;
   background: #e2bab2;
 }
 
@@ -334,7 +334,7 @@ Separator
   width: 85px;
   height: 2px;
   margin: 20px auto;
-  background: #e2bab2;
+  /* background: #e2bab2; */
 }
 
 .separator_small {
@@ -1096,7 +1096,7 @@ About section style
 }
 #about_content {
   width: 60%;
-  margin-right: 6vw;
+  margin-right: 15px;
 }
 #about_img {
   width: 30%;
@@ -1128,11 +1128,11 @@ About section style
 @media only screen and (max-width: 1024px) {
   #about_content {
     width: 60%;
-    margin-right: 6vw;
+    margin-right: 30px;
   }
   #about_content {
     width: 100%;
-    margin: 6vw;
+    margin: 30px;
   }
   #about_img {
     display: none;
@@ -1713,19 +1713,20 @@ Footer Section style
 }
 .recent-des .caption {
   font-size: 1.2rem;
-  line-height: 0;
   position: relative;
   color: gray;
 }
 
 .widget_recent {
   position: absolute;
+  bottom: 5px;
+  right: 10px;
 }
 
 .widget_recent ul li a i {
   background-color: #4270a3;
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   line-height: 30px;
   border-radius: 50%;
   text-align: center;
@@ -1810,7 +1811,7 @@ a:hover {
   font-weight: bold;
 }
 .research-icon {
-  width: 20px;
+  width: 18px;
 }
 .caption_conf {
   background-color: #f7cbc469;
@@ -1829,7 +1830,4 @@ a:hover {
 .text-bold {
   font-weight: 600;
   color: #4270a3;
-}
-.cv {
-  background-color: #4270a3 !important;
 }
