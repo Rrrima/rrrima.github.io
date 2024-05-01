@@ -9,7 +9,7 @@ body {
   margin-right: 0;
   font-weight: 400;
   width: 100%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Alegreya", serif;
 }
 
 /*------------------------------------------------------------------*/
@@ -207,7 +207,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   color: #1a1a1a;
   margin-bottom: 10px;
 }
@@ -228,7 +228,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.56rem;
   line-height: 2.2rem;
 }
 
@@ -755,14 +755,14 @@ textarea::-ms-input-placeholder {
 
 .head_title h2 {
   font-weight: 500;
-  font-size: 2.286rem;
+  font-size: 2.2rem;
   color: #1a1a1a;
 }
 
 .head_title p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   color: #4a4a4a;
 }
 
@@ -1092,7 +1092,7 @@ About section style
 }
 #about_content p {
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 #about_content {
   width: 60%;
@@ -1628,6 +1628,10 @@ Footer Section style
   border: none;
 }
 
+.navbar-nav {
+  font-family: "Source Sans 3", sans-serif;
+}
+
 .navbar-header button:focus {
   outline: none;
 }
@@ -1682,13 +1686,13 @@ Footer Section style
 }
 
 /*style for recent works*/
-.recent-title {
+/* .recent-title {
   border-bottom: #4270a3 solid 1px;
-}
+} */
 
 .recent-des {
-  font-size: 1.1rem;
-  padding: 10px 0px;
+  font-size: 1.2rem;
+  /* padding: 10px 0px; */
   /*background-color: rgba(66, 111, 163,0.1);*/
   color: "black";
   border-radius: 10px;
@@ -1696,20 +1700,19 @@ Footer Section style
 }
 
 .recent-des p {
-  line-height: 2;
+  position: relative;
+  line-height: 1.4;
+  margin-top: 20px;
 }
 .recent-des .caption {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 0;
   position: relative;
-  top: 3px;
   color: gray;
 }
 
 .widget_recent {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
 }
 
 .widget_recent ul li a i {
@@ -1786,4 +1789,26 @@ a:hover {
 .widget_home_sociallinks li {
   display: inline-block;
   padding-right: 25px;
+}
+
+.award-icon {
+  transform: translateY(5px);
+  width: 15px;
+  stroke-width: 2.5px;
+  color: orange;
+}
+
+.text-orange {
+  color: orange;
+  font-weight: bold;
+}
+.research-icon {
+  width: 20px;
+}
+.caption_conf {
+  background-color: #f7cbc469;
+  font-weight: bold;
+  padding: 3px 10px;
+  margin-right: 10px;
+  border-radius: 8px;
 }
