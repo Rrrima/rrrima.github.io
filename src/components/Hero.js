@@ -11,7 +11,7 @@ const Hero = () => {
 
         <div className="hero-flex-container">
           <div className="hero-image">
-            <img src="/images/profiles.png" alt="Rima" />
+            <img src="/images/profile.png" alt="Rima" />
             <div className="hero-contact-email">
               rimacyn [at] ucsd [dot] edu
             </div>
