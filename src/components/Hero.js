@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -11,7 +11,7 @@ const Hero = () => {
 
         <div className="hero-flex-container">
           <div className="hero-image">
-            <img src="/images/profile.png" alt="Rima" />
+            <img src="/images/profiles.png" alt="Rima" />
             <div className="hero-contact-email">
               rimacyn [at] ucsd [dot] edu
             </div>
