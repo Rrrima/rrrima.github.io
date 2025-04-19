@@ -1039,13 +1039,23 @@ Home Section style
 
 .home_text h1 {
   font-family: "Alegreya", serif;
-  font-size: 4.286rem;
-  font-weight: 700;
+  font-size: 2.286rem;
+  font-weight: 600;
   line-height: 6.5rem;
   color: #666;
   /* animation-name: opacity;
   animation-duration: 2s;
   animation-iteration-count: infinite; */
+}
+
+.text-message {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 3rem !important;
+}
+
+.text-message-link {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
