@@ -60,7 +60,7 @@ const Hero = () => {
 
           <div className="hero-text hero-intro">
             <p className="hero-caption">CURRENT</p>
-            <p>
+            <p id="current-intro-text">
               Hi, I am currently a 4th year Ph.D. student in{" "}
               <a
                 href="https://hci.ucsd.edu/"
