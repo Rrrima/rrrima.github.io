@@ -4,7 +4,6 @@ import Research from "./components/Research";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./styles/main.scss";
-import Cursor from "./components/Cursor";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
