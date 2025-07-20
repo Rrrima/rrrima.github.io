@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import activitiesData from "../data/activities.json";
 
 const ActivityLog = () => {
-  const [selectedTag, setSelectedTag] = useState("professional exp");
+  const [selectedTag, setSelectedTag] = useState("professional exp.");
   const [filteredActivities, setFilteredActivities] = useState([]);
   const [isAtBottom, setIsAtBottom] = useState(false);
   const scrollRef = useRef(null);
@@ -26,11 +26,15 @@ const ActivityLog = () => {
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1;
 
+    if (time.includes("?")) {
+      return true;
+    }
+
     // Check if the time contains current year and is ongoing
     if (time.includes(currentYear.toString())) {
       // Check if it's a range that includes current month
       if (time.includes("-")) {
-        const [start, end] = time.split(" - ");
+        const [start, end] = time.split("-");
         const startParts = start.split(".");
         const endParts = end.split(".");
 
@@ -52,12 +56,23 @@ const ActivityLog = () => {
     return false;
   };
 
-  const tags = ["professional exp", "education"];
+  const tags = ["professional exp.", "education"];
 
   return (
     <div className="activity-log-inline">
-      <p className="hero-caption">MY ACTIIVTY LOGS</p>
-
+      <div className="activity-log-tags-inline">
+        {tags.map((tag) => (
+          <button
+            key={tag}
+            className={`activity-tag-inline ${
+              selectedTag === tag ? "active" : ""
+            }`}
+            onClick={() => setSelectedTag(tag)}
+          >
+            {tag.charAt(0).toUpperCase() + tag.slice(1)}
+          </button>
+        ))}
+      </div>
       <div
         className={`activity-log-content-inline ${
           isAtBottom ? "at-bottom" : ""
@@ -81,20 +96,6 @@ const ActivityLog = () => {
             </span>
             <span className="activity-content-inline"> {activity.content}</span>
           </div>
-        ))}
-      </div>
-
-      <div className="activity-log-tags-inline">
-        {tags.map((tag) => (
-          <button
-            key={tag}
-            className={`activity-tag-inline ${
-              selectedTag === tag ? "active" : ""
-            }`}
-            onClick={() => setSelectedTag(tag)}
-          >
-            {tag.charAt(0).toUpperCase() + tag.slice(1)}
-          </button>
         ))}
       </div>
     </div>
