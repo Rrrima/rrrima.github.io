@@ -7,8 +7,9 @@ const paperData = [
     venue: "CHI 2025",
     thumbnail: "/images/thumbnails/jelly.png",
     links: [
-      { label: "preprint", url: "https://arxiv.org/pdf/2503.04084" },
+      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3706598.3713285" },
       { label: "video", url: "https://youtu.be/4T2ZaYowubA" },
+      { label: "arxiv", url: "https://arxiv.org/abs/2503.04084" },
     ],
   },
   {
@@ -20,8 +21,16 @@ const paperData = [
     venue: "CHI 2025",
     thumbnail: "/images/thumbnails/videOrigami.png",
     links: [
-      { label: "preprint", url: "https://arxiv.org/pdf/2503.04103" },
+      {
+        label: "paper",
+        url: "https://dl.acm.org/doi/full/10.1145/3706598.3713401",
+      },
       { label: "video", url: "https://youtu.be/U31u_uaBK-Y" },
+      {
+        label: "blog",
+        url: "https://research.adobe.com/news/an-experimental-new-design-approach-for-human-ai-co-creation/",
+      },
+      { label: "arxiv", url: "https://arxiv.org/pdf/2503.04103" },
     ],
   },
   {
@@ -32,7 +41,15 @@ const paperData = [
     thumbnail: "/images/thumbnails/malleable-odi.png",
     links: [
       {
-        label: "preprint",
+        label: "paper",
+        url: "https://dl.acm.org/doi/10.1145/3706598.3714164",
+      },
+      {
+        label: "video",
+        url: "https://www.youtube.com/watch?v=XOlhkhsxREY",
+      },
+      {
+        label: "arxiv",
         url: "https://arxiv.org/abs/2503.07782",
       },
     ],
@@ -46,7 +63,7 @@ const paperData = [
     venue: "CHI 2024",
     thumbnail: "/images/thumbnails/elastica.png",
     links: [
-      { label: "doi", url: "https://dl.acm.org/doi/10.1145/3613904.3642725" },
+      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3613904.3642725" },
       {
         label: "video",
         url: "https://youtu.be/HGN3Wc1cVgo?si=S7cIpd5gq9SQGE7t",
@@ -63,7 +80,7 @@ const paperData = [
     award: "Best Paper Award | TOP 1%",
     links: [
       {
-        label: "doi",
+        label: "paper",
         url: "https://dl.acm.org/doi/full/10.1145/3544548.3581472",
       },
       {
@@ -80,12 +97,16 @@ const paperData = [
     thumbnail: "/images/thumbnails/vs.png",
     links: [
       {
-        label: "doi",
+        label: "paper",
         url: "https://dl.acm.org/doi/10.1145/3490099.3511132",
       },
       {
         label: "video",
         url: "https://youtu.be/JO1z1wP0V04?si=xrI9KpkhMiFICySD",
+      },
+      {
+        label: "blog",
+        url: "https://hai.stanford.edu/news/new-app-videosticker-uses-ai-help-students-take-rich-notes-video-lessons",
       },
     ],
   },

@@ -1,0 +1,59 @@
+{
+  "activities": [
+    {
+      "time": "2025.6 - 2025.9",
+      "tags": ["professional exp"],
+      "content": "I am joining Microsoft Research EPIC Group in Redmond, WA, as a Research Scientist intern in Summer 2025"
+    },
+    {
+      "time": "2025.4",
+      "tags": ["professional exp"],
+      "content": "Attended CHI 2025 in Yokohama, Japan, presented two papers"
+    },
+    {
+      "time": "2024.7",
+      "tags": ["professional exp"],
+      "content": "Passed my Ph.D thesis proposal, become a Ph.D candidate"
+    },
+    {
+      "time": "2023.6 - 2023.9",
+      "tags": ["professional exp"],
+      "content": "Interned at Adobe Research (again!) in San Francisco, mentored by Anh and Valentina"
+    },
+    {
+      "time": "2022.6 - 2022.9",
+      "tags": ["professional exp"],
+      "content": "Interned at Adobe Research, mentored by Rubaiat and Liyi"
+    },
+    {
+      "time": "2021 - ? ",
+      "tags": ["professional exp", "education"],
+      "content": "Ph.D. in Codnitive Science at UCSD"
+    },
+    {
+      "time": "2019 - 2021",
+      "tags": ["professional exp", "education"],
+      "content": "Master at University of Michigan, Ann Arbor. Worked with Eytan Adar"
+    },
+    {
+      "time": "2015 - 2019",
+      "tags": ["professional exp", "education"],
+      "content": "Bachelor at Tsinghua University, Beijing"
+    },
+    {
+      "time": "2024.3",
+      "tags": ["thoughts"],
+      "content": "Reflecting on how computational structures can better support human thinking processes"
+    },
+    {
+      "time": "2023.11",
+      "tags": ["thoughts"],
+      "content": "Exploring the intersection of HCI and information architecture"
+    },
+    {
+      "time": "2023.6",
+      "tags": ["life"],
+      "content": "Graduated from Tsinghua University and moved to the United States"
+    }
+  ]
+}

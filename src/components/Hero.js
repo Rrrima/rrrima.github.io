@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import ActivityLog from "./ActivityLog";
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -6,9 +7,6 @@ const Hero = () => {
   return (
     <div className="hero" ref={heroRef}>
       <div className="hero-content">
-        <h1 className="hero-title">Rima</h1>
-        <h2 className="hero-subtitle">Cao, Yining</h2>
-
         <div className="hero-flex-container">
           <div className="hero-image">
             <img src="/images/profile.png" alt="Rima" />
@@ -56,6 +54,15 @@ const Hero = () => {
                 CV
               </a>
             </div>
+            <div className="hero-contact">
+              <a
+                href="https://rrrima.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                My Old Website :)
+              </a>
+            </div>
           </div>
 
           <div className="hero-text hero-intro">
@@ -73,68 +80,8 @@ const Hero = () => {
               at University of California, San Deigo, advised with Professor
               Haijun Xia
             </p>
-            <p className="hero-caption">PAST</p>
-            <p>
-              I had two amazing internships at Adobe Research, mentered by{" "}
-              <a
-                href="https://research.adobe.com/person/anh-truong/"
-                className="hero-lab-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Anh
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://rubaiathabib.me/"
-                className="hero-lab-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Rubaiat
-              </a>{" "}
-              <br />I had my master degree at University of Michigan, Ann Arbor,
-              worked with Professor{" "}
-              <a
-                href="https://www.cond.org/"
-                className="hero-lab-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Eytan Adar
-              </a>
-              <br />I got my Bachelor's degree from Tsinghua University, China
-            </p>
-            <p className="hero-caption">UPCOMING</p>
-            <p>
-              I am attending CHI 2025 in Yokohama, Japan, presenting two papers
-              <br />I will be joining Microsoft Research{" "}
-              <a
-                href="https://www.microsoft.com/en-us/research/group/epic/"
-                className="hero-lab-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                EPIC Group
-              </a>
-              in Redmond, WA, as a Research Scientist intern in Summer 2025
-            </p>
+            <ActivityLog />
           </div>
-        </div>
-
-        <div className="hero-text">
-          <p className="hero-caption2">My Research</p>
-          <p>
-            Our digital workspaces should not remain static backdrops to our
-            activity—they should evolve with us; responsive to our ex/implicit
-            intentions and personal preferences.
-          </p>
-          <p>
-            Towards this vision, my research explores - How information
-            structures should be generated, composed, and synchronized to
-            support information activities? What are the fundamental components
-            of our current interfaces that can be reimagined or reinvented?
-          </p>
         </div>
       </div>
     </div>

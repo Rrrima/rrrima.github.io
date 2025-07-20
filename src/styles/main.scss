@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;
@@ -22,7 +27,6 @@ body {
 .app {
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
 
   &.scrolled {
     .container {
@@ -33,11 +37,98 @@ body {
 }
 
 .header {
+  position: -webkit-sticky;
   position: sticky;
-  padding: 1rem $container-padding;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem $container-padding 0.5rem $container-padding;
   width: 100%;
-  z-index: 10;
-  height: 50px;
+  z-index: 1000;
+  height: auto;
+  background-color: transparent;
+  transition: all 0.3s ease;
+
+  // Create gradient blur effect using multiple pseudo-elements
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(30px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.9) 30%,
+      rgba(0, 0, 0, 0.7) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.9) 30%,
+      rgba(0, 0, 0, 0.7) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(18px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.3) 30%,
+      rgba(0, 0, 0, 0.7) 60%,
+      rgba(0, 0, 0, 0.4) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.3) 30%,
+      rgba(0, 0, 0, 0.7) 60%,
+      rgba(0, 0, 0, 0.4) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: -1;
+  }
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header.scrolled {
+  .header-content {
+    border-bottom: 1.5px solid rgba(86, 161, 208, 0.423);
+  }
+}
+
+.header-hero-titles {
+  .hero-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease-out, font-size 0.3s ease-out;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $accent-color;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-out, font-size 0.3s ease-out;
+  }
 }
 
 .container {
@@ -82,7 +173,6 @@ body {
 .hero-flex-container {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 2rem;
 }
 
 .hero {
@@ -124,6 +214,7 @@ body {
 .hero-text {
   p {
     margin-bottom: 1rem;
+    padding-right: 1rem;
     font-size: 1.1rem;
     line-height: 1.7;
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
@@ -145,6 +236,9 @@ body {
 .research-content {
   max-width: 800px;
   width: 100%;
+  .hero-text {
+    margin-bottom: 2rem;
+  }
 }
 
 .research-title {
@@ -278,7 +372,6 @@ body {
 }
 
 .hero-intro {
-  margin-bottom: 2rem;
   margin-right: 1.2rem;
 }
 
@@ -349,6 +442,203 @@ body {
   p {
     margin-bottom: 0;
     margin-top: 0;
+  }
+}
+
+// Activity Log Component
+.activity-log {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.activity-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.activity-log-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $primary-color;
+  margin: 0;
+}
+
+.activity-log-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.activity-tag {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(49, 154, 206, 0.3);
+  background: transparent;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: $accent-color;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: $font-family-base;
+
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(49, 154, 206, 0.1),
+      rgba(49, 154, 206, 0.2)
+    );
+    transform: translateY(-1px);
+  }
+
+  &.active {
+    background: linear-gradient(
+      135deg,
+      rgba(49, 154, 206, 0.2),
+      rgba(49, 154, 206, 0.3)
+    );
+    color: $primary-color;
+    font-weight: 500;
+  }
+}
+
+.activity-log-content {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 1rem;
+
+  // Glass-like scrollbar styling
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      135deg,
+      rgba(49, 154, 206, 0.3),
+      rgba(151, 205, 232, 0.5)
+    );
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        rgba(49, 154, 206, 0.5),
+        rgba(49, 154, 206, 0.7)
+      );
+    }
+  }
+
+  // Firefox scrollbar styling
+  scrollbar-width: thin;
+  scrollbar-color: rgba(205, 238, 255, 0.1) rgba(255, 255, 255, 0.1);
+}
+
+.activity-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.activity-time {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $accent-color;
+  min-width: 80px;
+  padding-top: 0.2rem;
+}
+
+.activity-content {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $primary-color;
+}
+
+// Responsive styles for Activity Log
+@media (max-width: $breakpoint-md) {
+  .activity-log {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+  }
+
+  .activity-log-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .activity-log-title {
+    font-size: 1.2rem;
+  }
+
+  .activity-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .activity-time {
+    min-width: auto;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .activity-log {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  .activity-log-content {
+    max-height: 300px;
+  }
+
+  .activity-content {
+    font-size: 0.9rem;
   }
 }
 
@@ -430,5 +720,190 @@ body {
 
   .hero-intro {
     text-align: center;
+  }
+}
+
+// Activity Log Component - Inline version
+.activity-log-inline {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.activity-log-header-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.activity-log-tags-inline {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+
+.activity-tag-inline {
+  padding: 0.3rem 0.8rem;
+  border: none;
+  background: transparent;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: $accent-color;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: $font-family-base;
+
+  &:hover {
+    background: transparent;
+    transform: translateY(-1px);
+    color: $primary-color;
+  }
+
+  &.active {
+    background: transparent;
+    color: $primary-color;
+    font-weight: 500;
+  }
+}
+
+.activity-log-content-inline {
+  height: 200px;
+  overflow-y: auto;
+  padding-left: 1rem;
+  position: relative;
+  direction: rtl; // Right-to-left to move scrollbar to left
+  overscroll-behavior: contain; // Prevent scroll chaining to parent
+
+  // Reset text direction for content
+  & > * {
+    direction: ltr;
+  }
+
+  // Prevent main page scroll when hovering over this area
+  &:hover {
+    overscroll-behavior: contain;
+  }
+
+  // Transparent liquid-like scrollbar styling
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 1.5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      135deg,
+      rgba(49, 154, 206, 0.1),
+      rgba(49, 154, 206, 0.15)
+    );
+    border-radius: 1.5px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        rgba(49, 154, 206, 0.2),
+        rgba(49, 154, 206, 0.25)
+      );
+      transform: scaleX(1.2);
+    }
+  }
+
+  // Squeeze animation when scrolling to bottom
+  &:hover::-webkit-scrollbar-thumb {
+    transform: scaleX(1.1);
+  }
+
+  // Squeeze animation when at bottom
+  &.at-bottom::-webkit-scrollbar-thumb {
+    transform: scaleX(0.8);
+    background: linear-gradient(
+      135deg,
+      rgba(49, 154, 206, 0.05),
+      rgba(49, 154, 206, 0.1)
+    );
+  }
+
+  // Firefox scrollbar styling
+  scrollbar-width: thin;
+  scrollbar-color: rgba(49, 154, 206, 0.15) transparent;
+}
+
+.activity-item-inline {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: $primary-color;
+  position: relative;
+  z-index: 2;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // Current activities have full opacity
+  &.current {
+    opacity: 1;
+  }
+}
+
+.activity-time-inline {
+  font-weight: 400;
+  color: #a1a1a1;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+
+  &.current {
+    color: $accent-color;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+}
+
+.activity-content-inline {
+  color: $primary-color;
+}
+
+// Responsive styles for inline Activity Log
+@media (max-width: $breakpoint-md) {
+  .activity-log-header-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .activity-log-content-inline {
+    height: 150px;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .activity-log-content-inline {
+    height: 120px;
+  }
+
+  .activity-item-inline {
+    font-size: 1rem;
+  }
+
+  .activity-time-inline {
+    font-size: 0.7rem;
+
+    &.current {
+      font-size: 0.8rem;
+    }
   }
 }

@@ -25,11 +25,11 @@ function App() {
 
   return (
     <div className={`app ${isScrolled ? "scrolled" : ""}`}>
-      <Header />
+      <Header isScrolled={isScrolled} />
       <Hero />
       <Research />
       <Footer />
-      <Cursor />
+      {/* <Cursor /> */}
       <div className="container-overlay"></div>
     </div>
   );
