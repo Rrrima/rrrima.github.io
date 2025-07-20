@@ -24,6 +24,10 @@
   align-items: center;
   justify-content: center;
   transition: border-radius 0.3s ease;
+
+  /* STAKEHOLDER: Add mobile fairy-cursor styles here */
+  /* Consider: hiding custom cursor on touch devices */
+  /* Example: @media (hover: none) { display: none; } */
 }
 
 .hint {
@@ -33,6 +37,9 @@
   background: $bubble-bg;
   transition: all 0.3s ease;
   padding: 5px 10px;
+
+  /* STAKEHOLDER: Add mobile hint styles here */
+  /* Consider: touch-friendly hint sizing, mobile hint positioning */
 }
 
 .hover-link {
@@ -42,6 +49,9 @@
     rgba(255, 255, 255, 0.3),
     rgba(151, 220, 255, 0.2)
   );
+
+  /* STAKEHOLDER: Add mobile hover-link styles here */
+  /* Consider: touch states instead of hover, active states for mobile */
 }
 
 .iframe-window {
@@ -66,6 +76,10 @@
   &:hover {
     box-shadow: 0 2px 20px rgba(85, 85, 85, 0.1);
   }
+
+  /* STAKEHOLDER: Add mobile iframe-window styles here */
+  /* Consider: full-screen or near-full-screen on mobile */
+  /* Consider: mobile-optimized dimensions, touch-friendly padding */
 }
 
 .iframe-header {
@@ -76,6 +90,9 @@
   padding: 0 12px;
   cursor: move;
   user-select: none;
+
+  /* STAKEHOLDER: Add mobile iframe-header styles here */
+  /* Consider: larger touch targets, mobile-friendly header height */
 }
 
 .iframe-url {
@@ -85,6 +102,9 @@
   text-overflow: ellipsis;
   max-width: 450px;
   color: $primary-color;
+
+  /* STAKEHOLDER: Add mobile iframe-url styles here */
+  /* Consider: mobile font-size, responsive max-width, mobile text handling */
 }
 
 .iframe-close {
@@ -107,10 +127,22 @@
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
+
+  /* STAKEHOLDER: Add mobile iframe-close styles here */
+  /* Consider: larger touch target (min 44px), mobile touch states, mobile positioning */
 }
 
 .iframe-content {
   flex: 1;
   width: 100%;
   border: none;
+
+  /* STAKEHOLDER: Add mobile iframe-content styles here */
+  /* Consider: mobile iframe sizing, touch scrolling optimization */
 }
+
+/* STAKEHOLDER: Add mobile-specific cursor alternatives here */
+/* Consider: touch feedback effects, mobile interaction indicators */
+
+/* STAKEHOLDER: Add mobile iframe responsive behavior here */
+/* Consider: mobile modal patterns, mobile overlay optimizations */

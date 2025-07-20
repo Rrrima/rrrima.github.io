@@ -6,20 +6,42 @@ $secondary-color: #ffffff;
 $accent-color: #319ace;
 $border-color: #e0e0e0;
 
+/* STAKEHOLDER: Add mobile-specific color variations here */
+/* Consider: high contrast colors for mobile, touch state colors, mobile accessibility colors */
+
 // Typography
 $font-family-base: "Barlow", sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.2;
 
+/* STAKEHOLDER: Add mobile typography variables here */
+/* Consider: mobile font sizes, mobile line heights, mobile font loading optimization */
+/* Example: $font-size-mobile-base: 16px, $line-height-mobile: 1.4 */
+
 // Breakpoints
-$breakpoint-sm: 576px;
+$breakpoint-sm: 700px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
+/* STAKEHOLDER: Add additional mobile breakpoints here */
+/* Consider: $breakpoint-xs: 320px, $breakpoint-mobile-landscape: 480px */
+/* Consider: $breakpoint-tablet: 1024px for better tablet support */
+
 // Spacing
 $spacing-unit: 8px;
 $container-padding: 12rem;
+
+/* STAKEHOLDER: Add mobile spacing variables here */
+/* Consider: $container-padding-mobile, $spacing-unit-mobile, touch-target sizes */
+/* Example: $container-padding-mobile: 1rem, $touch-target-min: 44px */
+
+/* EXAMPLE: Mobile-specific variables */
+$container-padding-mobile: 1rem;
+$container-padding-tablet: 2rem;
+$touch-target-min: 44px;
+$mobile-font-size-base: 16px;
+$mobile-line-height: 1.4;
 
 $fairy-color: linear-gradient(
   135deg,
@@ -31,3 +53,6 @@ $bubble-bg: linear-gradient(
   rgba(167, 232, 255, 0.768) 0%,
   rgba(107, 200, 234, 0.732) 100%
 );
+
+/* STAKEHOLDER: Add mobile-specific gradient and effect variables here */
+/* Consider: simpler gradients for mobile performance, mobile-optimized backdrop filters */

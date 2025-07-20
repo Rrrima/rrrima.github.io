@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+/* STAKEHOLDER: Add mobile-specific flex mixins here */
+/* Consider: mobile flex utilities, touch-friendly flex layouts */
+/* Example: @mixin flex-mobile-stack, @mixin flex-mobile-center */
+
 @mixin responsive($breakpoint) {
   @if $breakpoint == sm {
     @media (min-width: $breakpoint-sm) {
@@ -27,9 +31,50 @@
   }
 }
 
+/* STAKEHOLDER: Extend responsive mixin for mobile-first approach here */
+/* Consider: adding xs, mobile-landscape, and tablet breakpoints */
+/* Consider: @mixin mobile-only, @mixin mobile-up, @mixin tablet-up mixins */
+
 @mixin container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 $container-padding;
 }
+
+/* STAKEHOLDER: Add mobile container mixins here */
+/* Consider: @mixin container-mobile with reduced padding */
+/* Consider: @mixin container-fluid for full-width mobile layouts */
+
+/* STAKEHOLDER: Add mobile typography mixins here */
+/* Consider: @mixin mobile-heading, @mixin mobile-body-text, @mixin mobile-caption */
+
+/* STAKEHOLDER: Add mobile interaction mixins here */
+/* Consider: @mixin touch-target (min 44px), @mixin mobile-hover-states */
+
+/* EXAMPLE: Mobile interaction mixins */
+@mixin touch-target {
+  min-height: $touch-target-min;
+  min-width: $touch-target-min;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mobile-only {
+  @media (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+/* STAKEHOLDER: Add mobile layout mixins here */
+/* Consider: @mixin mobile-card, @mixin mobile-list-item, @mixin mobile-section-spacing */
+
+/* STAKEHOLDER: Add mobile animation and transition mixins here */
+/* Consider: reduced motion preferences, mobile-optimized transitions */
