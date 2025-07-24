@@ -17,7 +17,7 @@ const Research = () => {
           </p>
           <p>
             My Ph.D research focuses on how computational structures, as one of
-            the foundamental components. can be generated, composed, and
+            the foundamental components, can be generated, composed, and
             synchronized to support complex information activities.
           </p>
         </div>
