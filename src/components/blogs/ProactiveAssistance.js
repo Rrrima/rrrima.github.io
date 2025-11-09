@@ -322,8 +322,8 @@ const ProactiveAssistance = () => {
               it 1min before meeting!
             </ListItem>
             <ListItem>
-              if notes are hard to find, that means they're important enough to
-              ceremonially link.
+              if notes are hard to find, that means they're NOT important enough
+              to ceremonially link.
             </ListItem>
             <ListItem>Result: I link nothing.</ListItem>
           </List>
@@ -350,7 +350,7 @@ const ProactiveAssistance = () => {
 
           <Paragraph>
             There lacks a <Wiggle>low-friction</Wiggle> way to turn{" "}
-            <Wiggle>lived history</Wiggle> into usable
+            <Wiggle>lived history</Wiggle> into usable{" "}
             <Wiggle>future context</Wiggle>.
           </Paragraph>
         </Section>
@@ -524,7 +524,8 @@ const ProactiveAssistance = () => {
           </Paragraph>
           <Paragraph>
             As the types of tasks mentioned above, where people won't
-            self-organize, can't easily search, and don't even know what to ask.{" "}
+            self-organize, can't easily search, and maybe don't even know what
+            to ask.{" "}
           </Paragraph>
         </Section>
 
@@ -549,7 +550,7 @@ const ProactiveAssistance = () => {
             <Wiggle>stuck on top of existing mess</Wiggle>.{" "}
           </Paragraph>
           <Paragraph>
-            The best assistance is the kind we didn't know to ask for—but needed
+            But also, the tiny help that we didn't know to ask for—but needed
             anyway.
           </Paragraph>
         </Section>
