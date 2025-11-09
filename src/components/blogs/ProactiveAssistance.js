@@ -187,7 +187,7 @@ const ProactiveAssistance = () => {
 
           <Paragraph>
             I keep wishing I had a little creature on my desktop. Something I
-            can squish, and it bubble out something like:
+            can just poke it, and it bubble out something like:
           </Paragraph>
 
           {/* <TalkingBubble>
