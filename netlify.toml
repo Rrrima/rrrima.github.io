@@ -2,9 +2,3 @@
   command = "npm run build"
   publish = "build"
 
-# Enable prerendering for social media crawlers
-# This will pre-render your React pages so that Open Graph meta tags
-# are visible to social media crawlers (Facebook, Twitter, LinkedIn, etc.)
-[[plugins]]
-  package = "netlify-plugin-prerender-spa"
-
