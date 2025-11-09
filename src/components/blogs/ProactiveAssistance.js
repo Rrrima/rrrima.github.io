@@ -547,11 +547,8 @@ const ProactiveAssistance = () => {
           </Paragraph>
           <Paragraph>
             We don't just need "an AI"{" "}
-            <Wiggle>stuck on top of existing mess</Wiggle>.{" "}
-          </Paragraph>
-          <Paragraph>
-            But also, the tiny help that we didn't know to ask for—but needed
-            anyway.
+            <Wiggle>stuck on top of existing mess</Wiggle>. But also, the tiny
+            help that we didn't know to ask for—but needed anyway.
           </Paragraph>
         </Section>
       </div>
