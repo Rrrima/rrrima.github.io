@@ -18,6 +18,11 @@ function AppContent() {
   // Check if we're on a blog post page
   const isBlogPost = location.pathname.startsWith("/blog/");
 
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
