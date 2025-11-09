@@ -214,13 +214,13 @@ const ProactiveAssistance = () => {
             It's never true that I have nothing to do --{" "}
             <Wiggle>The todos exists</Wiggle> , they're just hiding in:
             <List type="bullet">
-              <ListItem>emails: that form due by 11/15</ListItem>
+              <ListItem>Emails: that form due by 11/15</ListItem>
               <ListItem>Slack messages: someone needs those materials</ListItem>
               <ListItem>
-                texts: your friend is still waiting for a reply
+                iMessages: your friend is still waiting for a reply
               </ListItem>
               <ListItem>
-                canvas: those students have been waiting two weeks, hi 👋
+                Canvas: those students have been waiting two weeks, hi 👋
               </ListItem>
             </List>
           </Paragraph>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import blogData from "../data/blogData";
 
 // Import all blog components
@@ -34,6 +35,9 @@ const BlogPost = () => {
   if (!blog) {
     return (
       <div className="blog-post">
+        <Helmet>
+          <title>Blog Post Not Found - Yining "Rima" Cao</title>
+        </Helmet>
         <div className="blog-post-header">
           <div className="blog-post-header-content">
             <Link to="/" className="blog-back-link">
@@ -52,8 +56,34 @@ const BlogPost = () => {
   // Get the blog component
   const BlogComponent = blogComponents[blog.component];
 
+  // Construct full URL for Open Graph tags
+  const siteUrl = "https://rrrima.me";
+  const blogUrl = `${siteUrl}/blog/${blog.id}`;
+  const imageUrl = blog.thumbnail
+    ? `${siteUrl}${blog.thumbnail}`
+    : `${siteUrl}/logo4.png`;
+
   return (
     <div className="blog-post">
+      <Helmet>
+        <title>{blog.title} - Yining "Rima" Cao</title>
+        <meta name="description" content={blog.excerpt} />
+
+        {/* Open Graph tags for Facebook, LinkedIn, etc. */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:description" content={blog.excerpt} />
+        <meta property="og:url" content={blogUrl} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="article:published_time" content={blog.date} />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={blog.title} />
+        <meta name="twitter:description" content={blog.excerpt} />
+        <meta name="twitter:image" content={imageUrl} />
+      </Helmet>
+
       <div
         className={`blog-post-header ${showTitleInHeader ? "with-title" : ""}`}
       >
