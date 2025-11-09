@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className="footer">
-      <p> -- last updated: 2025-07-19 -- </p>
+      <p> -- last updated: 2025-11-09 -- </p>
     </div>
   );
 };

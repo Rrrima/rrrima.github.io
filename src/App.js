@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from "react";
-import Hero from "./components/Hero";
-import Research from "./components/Research";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Home from "./components/Home";
+import BlogPost from "./components/BlogPost";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./styles/main.scss";
 
-function App() {
+function AppContent() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
+  // Check if we're on a blog post page
+  const isBlogPost = location.pathname.startsWith("/blog/");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,13 +34,23 @@ function App() {
 
   return (
     <div className={`app ${isScrolled ? "scrolled" : ""}`}>
-      <Header isScrolled={isScrolled} />
-      <Hero />
-      <Research />
-      <Footer />
+      {!isBlogPost && <Header isScrolled={isScrolled} />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
+      </Routes>
+      {!isBlogPost && <Footer />}
       {/* <Cursor /> */}
       <div className="container-overlay"></div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
