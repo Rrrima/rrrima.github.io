@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import blogData from "../data/blogData";
-import { Paragraph } from "./blogs/BlogComponents";
 
 // Import all blog components
 import ProactiveAssistance from "./blogs/ProactiveAssistance";
