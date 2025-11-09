@@ -4,7 +4,7 @@ const blogData = [
     id: "proactive-assistance",
     title: "Something about proactive assistance",
     date: "November 9, 2025",
-    excerpt: "thoughts on why i want a tiny gremlin living in my computer...",
+    excerpt: "thoughts on why i want a tiny fairy living in my computer...",
     thumbnail: null, // optional: "/images/blog/proactive-assistance-thumbnail.png"
     component: "ProactiveAssistance", // References blogs/ProactiveAssistance.js
   },
