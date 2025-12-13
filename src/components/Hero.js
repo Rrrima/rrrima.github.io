@@ -68,7 +68,7 @@ const Hero = () => {
           <div className="hero-text hero-intro">
             <p className="hero-caption">ABOUT ME</p>
             <p id="current-intro-text">
-              Hi, I am currently a 4th year Ph.D. student in{" "}
+              Hi, I am currently a 5th year Ph.D. student in{" "}
               <a
                 href="https://hci.ucsd.edu/"
                 className="hero-lab-link"
