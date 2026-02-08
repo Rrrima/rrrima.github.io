@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import activitiesData from "../data/activities.json";
+import { ExternalLink } from "lucide-react";
 
 const ActivityLog = () => {
-  const [selectedTag, setSelectedTag] = useState("professional exp.");
+  const [selectedTag, setSelectedTag] = useState("now & Then");
   const [filteredActivities, setFilteredActivities] = useState([]);
   const [isAtBottom, setIsAtBottom] = useState(false);
   const scrollRef = useRef(null);
@@ -20,8 +21,38 @@ const ActivityLog = () => {
     setIsAtBottom(isBottom);
   };
 
+  // Function to render content with hyperlinks as icon buttons
+  const renderContent = (content) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = content.split(urlRegex);
+    
+    return parts.map((part, index) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="activity-link-button"
+            title={part}
+          >
+            <ExternalLink size={13} />
+          </a>
+        );
+      }
+      return <span key={index}>{part}</span>;
+    });
+  };
+
   // Function to check if activity is current/ongoing
-  const isCurrentActivity = (time) => {
+  const isCurrentActivity = (activity) => {
+    // First check if the activity has an explicit iscurrent flag
+    if (activity.iscurrent === true) {
+      return true;
+    }
+
+    const time = activity.time;
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1;
@@ -56,7 +87,7 @@ const ActivityLog = () => {
     return false;
   };
 
-  const tags = ["professional exp.", "education"];
+  const tags = ["now & Then", "education"];
 
   return (
     <div className="activity-log-inline">
@@ -84,17 +115,19 @@ const ActivityLog = () => {
           <div
             key={index}
             className={`activity-item-inline ${
-              isCurrentActivity(activity.time) ? "current" : ""
+              isCurrentActivity(activity) ? "current" : ""
             }`}
           >
             <span
               className={`activity-time-inline ${
-                isCurrentActivity(activity.time) ? "current" : ""
+                isCurrentActivity(activity) ? "current" : ""
               }`}
             >
               {activity.time}
             </span>
-            <span className="activity-content-inline"> {activity.content}</span>
+            <span className="activity-content-inline">
+              {renderContent(activity.content)}
+            </span>
           </div>
         ))}
       </div>

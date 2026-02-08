@@ -1,28 +1,34 @@
 {
   "activities": [
     {
+      "time": "2026.2",
+      "tags": ["now & Then"],
+      "iscurrent": true,
+      "content": "Our CHI'26 workshop on Generative UI is calling for participation https://genuimeetshci.github.io/chi26-workshop/"
+    },
+    {
       "time": "2025.6 - 2025.9",
-      "tags": ["professional exp."],
+      "tags": ["now & Then"],
       "content": "Research Scientist Intern at Microsoft Research EPIC Group, Redmond"
     },
     {
       "time": "2025.4",
-      "tags": ["professional exp."],
+      "tags": ["now & Then"],
       "content": "Attended CHI 2025 in Yokohama, Japan, presented two papers"
     },
     {
       "time": "2024.7",
-      "tags": ["professional exp."],
+      "tags": ["now & Then"],
       "content": "Passed my Ph.D thesis proposal, become a Ph.D candidate"
     },
     {
       "time": "2023.6 - 2023.9",
-      "tags": ["professional exp."],
+      "tags": ["now & Then"],
       "content": "Interned at Adobe Research (again!) in San Francisco, mentored by Anh and Valentina"
     },
     {
       "time": "2022.6 - 2022.9",
-      "tags": ["professional exp."],
+      "tags": ["now & Then"],
       "content": "Interned at Adobe Research, mentored by Rubaiat and Liyi"
     },
     {
@@ -32,12 +38,12 @@
     },
     {
       "time": "2019 - 2021",
-      "tags": ["professional exp.", "education"],
+      "tags": ["now & Then", "education"],
       "content": "Master at University of Michigan, Ann Arbor. Worked with Eytan Adar"
     },
     {
       "time": "2015 - 2019",
-      "tags": ["professional exp.", "education"],
+      "tags": ["now & Then", "education"],
       "content": "Bachelor at Tsinghua University, Beijing"
     },
     {

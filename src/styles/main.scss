@@ -619,6 +619,16 @@ body {
   color: $primary-color;
 }
 
+.activity-link-button{
+  color: rgba($primary-color, 0.85)
+}
+
+.activity-link-button:hover{
+  color:$accent-color;
+  transition:all 0.2s ease-in-out
+}
+
+
 // Responsive styles for Activity Log
 @media (max-width: $breakpoint-sm) {
   .activity-log {
