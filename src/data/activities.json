@@ -1,9 +1,13 @@
 {
   "activities": [
     {
+      "time": "2026.4",
+      "tags": ["now & Then"],
+      "content": "Received Microsoft Research Fellowship on Generative UI https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/fellows/"
+    },
+    {
       "time": "2026.2",
       "tags": ["now & Then"],
-      "iscurrent": true,
       "content": "Our CHI'26 workshop on Generative UI is calling for participation https://genuimeetshci.github.io/chi26-workshop/"
     },
     {
@@ -39,7 +43,7 @@
     {
       "time": "2019 - 2021",
       "tags": ["now & Then", "education"],
-      "content": "Master at University of Michigan, Ann Arbor. Worked with Eytan Adar"
+      "content": "Master at University of Michigan, Ann Arbor"
     },
     {
       "time": "2015 - 2019",

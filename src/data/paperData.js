@@ -2,6 +2,42 @@ const paperData = [
   {
     id: 1,
     title:
+      "Exploring Fairy Cursor as a Form of AI Agent for In-the-Flow Assistance: Design Opportunities and Challenges",
+    authors: "Yining Cao, James D. Hollan, Haijun Xia",
+    venue: "DIS 2026",
+    thumbnail: "/images/thumbnails/fairy_thumbnail.png",
+    links: [
+      { label: "preprint", url: "/fairycursor_preprint.pdf" },
+    ],
+  },
+  {
+    id: 1,
+    title: "Tidynote: Always-Clear Notebook Authoring",
+    authors:
+      "Ruanqianqian Huang, Brian Hempel, Yining Cao, James D. Hollan, Haijun Xia, Sorin Lerner",
+    venue: "CHI 2026",
+    thumbnail: "/images/thumbnails/tidynote_thumbnail.png",
+    links: [
+      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3772318.3791919" },
+      { label: "arxiv", url: "https://arxiv.org/abs/2602.23490" },
+    ],
+  },
+  {
+    id: 1,
+    title:
+      "VizCrit: Exploring Strategies for Displaying Computational Feedback in a Visual Design Tool",
+    authors:
+      "Mingyi Li, Mengyi Chen, Sarah Luo, Yining Cao, Haijun Xia, Maitraye Das, Steven P. Dow, Jane L. E",
+    venue: "CHI 2026",
+    thumbnail: "/images/thumbnails/vizcrit_thumbnail.png",
+    links: [
+      { label: "paper", url: "https://dl.acm.org/doi/10.1145/3772318.3791579" },
+      { label: "arxiv", url: "https://arxiv.org/abs/2603.04754" },
+    ],
+  },
+  {
+    id: 1,
+    title:
       "Generative and Malleable User Interfaces with Generative and Evolving Task-Driven Data Model",
     authors: "Yining Cao, Peiling Jiang, Haijun Xia",
     venue: "CHI 2025",
