@@ -1,6 +1,12 @@
 {
   "activities": [
     {
+      "time": "2026.5.12",
+      "tags": ["now & Then"],
+      "content": "Defended my Ph.D. dissertation: Generative and Composable User Interfaces via Task Structures",
+      "iscurrent": true
+    },
+    {
       "time": "2026.4",
       "tags": ["now & Then"],
       "content": "Received Microsoft Research Fellowship on Generative UI https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/fellows/"
@@ -36,7 +42,7 @@
       "content": "Interned at Adobe Research, mentored by Rubaiat and Liyi"
     },
     {
-      "time": "2021 - ?",
+      "time": "2021 - 2026",
       "tags": ["education"],
       "content": "Ph.D. in Cognitive Science at UCSD"
     },
