@@ -6,9 +6,8 @@ const paperData = [
     authors: "Yining Cao, James D. Hollan, Haijun Xia",
     venue: "DIS 2026",
     thumbnail: "/images/thumbnails/fairy_thumbnail.png",
-    links: [
-      { label: "preprint", url: "/fairycursor_preprint.pdf" },
-    ],
+    award: "Best Paper Award | TOP 1%",
+    links: [{ label: "preprint", url: "/fairycursor_preprint.pdf" }],
   },
   {
     id: 1,
