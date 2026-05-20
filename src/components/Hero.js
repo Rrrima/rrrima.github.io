@@ -77,7 +77,7 @@ const Hero = () => {
               >
                 Foundation Interface Lab
               </a>{" "}
-              at University of California, San Diego, advised with Professor
+              at University of California, San Diego, advised by Professor
               Haijun Xia
             </p>
             <ActivityLog />
