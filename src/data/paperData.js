@@ -7,7 +7,10 @@ const paperData = [
     venue: "DIS 2026",
     thumbnail: "/images/thumbnails/fairy_thumbnail.png",
     award: "Best Paper Award | TOP 1%",
-    links: [{ label: "preprint", url: "/fairycursor_preprint.pdf" }],
+    links: [
+      { label: "paper", url: "/fairycursor.pdf" },
+      { label: "talk", url: "https://youtu.be/K1cZihVY95g" },
+    ],
   },
   {
     id: 1,
