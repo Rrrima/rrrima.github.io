@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import BlogPost from "./components/BlogPost";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Carrotie from "./components/Carrotie";
 import "./styles/main.scss";
 
 function AppContent() {
@@ -48,6 +49,7 @@ function AppContent() {
       {!isBlogPost && <Footer />}
       {/* <Cursor /> */}
       <div className="container-overlay"></div>
+      <Carrotie />
     </div>
   );
 }
