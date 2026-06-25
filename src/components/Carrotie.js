@@ -10,15 +10,22 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// carrotie:theme
+// carrotie:theme — "liquid glass": translucent, frosted, minimal.
 const THEME = {
-  accent: "#319ace", // button + user-bubble background ($accent-color)
+  accent: "#319ace", // brand blue ($accent-color)
   accentText: "#ffffff", // text/icon shown on top of the accent colour
-  surface: "#ffffff", // chat panel background ($secondary-color)
-  text: "#333333", // assistant text + input text ($primary-color)
-  botBubble: "#eaf5fb", // assistant bubble background (soft tint of the accent)
+  text: "#2a3540", // assistant text + input text (soft near-$primary-color)
   fontFamily: '"Barlow", sans-serif', // $font-family-base
-  radius: 16, // panel corner radius in px
+  radius: 22, // panel corner radius in px
+
+  // Frosted-glass surfaces (translucent + backdrop blur supplies the rest)
+  glass: "rgba(255, 255, 255, 0.55)", // chat panel base tint
+  glassBlur: "blur(20px) saturate(160%)", // backdrop filter
+  glassBorder: "1px solid rgba(255, 255, 255, 0.55)", // hairline highlight edge
+  glassShadow: "0 8px 32px rgba(31, 122, 170, 0.18)", // soft blue-grey lift
+  // Soft blue gradient echoing $bubble-bg / $fairy-color from the site
+  accentGlass: "linear-gradient(135deg, rgba(167, 232, 255, 0.85) 0%, rgba(49, 154, 206, 0.85) 100%)",
+  botGlass: "rgba(255, 255, 255, 0.45)", // assistant bubble
 };
 
 // carrotie:copy
@@ -72,10 +79,12 @@ export default function Carrotie() {
           width: 48,
           height: 48,
           borderRadius: "50%",
-          border: "none",
+          border: THEME.glassBorder,
           cursor: "pointer",
-          background: THEME.accent,
-          boxShadow: "0 6px 24px rgba(0,0,0,.25)",
+          background: THEME.accentGlass,
+          backdropFilter: THEME.glassBlur,
+          WebkitBackdropFilter: THEME.glassBlur,
+          boxShadow: THEME.glassShadow,
           display: "grid",
           placeItems: "center",
         }}
@@ -207,15 +216,18 @@ function ChatPanel({ admin }) {
         width: 340,
         height: 460,
         marginBottom: 12,
-        background: THEME.surface,
+        background: THEME.glass,
+        backdropFilter: THEME.glassBlur,
+        WebkitBackdropFilter: THEME.glassBlur,
+        border: THEME.glassBorder,
         borderRadius: THEME.radius,
-        boxShadow: "0 10px 40px rgba(0,0,0,.2)",
+        boxShadow: THEME.glassShadow,
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
       }}
     >
-      <div style={{ padding: "12px 16px", background: THEME.accent, color: THEME.accentText, fontWeight: 600 }}>
+      <div style={{ padding: "14px 18px", color: THEME.text, fontWeight: 600, borderBottom: "1px solid rgba(255,255,255,0.4)" }}>
         {COPY.header}
         {admin && (
           <span style={{ marginLeft: 8, fontSize: 11, opacity: 0.8, fontWeight: 500 }}>· admin</span>
@@ -234,11 +246,14 @@ function ChatPanel({ admin }) {
             <div
               style={{
                 padding: "8px 12px",
-                borderRadius: 12,
+                borderRadius: 14,
                 fontSize: 14,
                 lineHeight: 1.4,
                 whiteSpace: "pre-wrap",
-                background: m.role === "user" ? THEME.accent : THEME.botBubble,
+                background: m.role === "user" ? THEME.accentGlass : THEME.botGlass,
+                backdropFilter: "blur(8px)",
+                WebkitBackdropFilter: "blur(8px)",
+                border: "1px solid rgba(255,255,255,0.45)",
                 color: m.role === "user" ? THEME.accentText : THEME.text,
               }}
             >
@@ -267,16 +282,16 @@ function ChatPanel({ admin }) {
       </div>
 
       {pending && (
-        <div style={{ display: "flex", gap: 8, padding: "8px 12px", borderTop: "1px solid #eee", background: "#fafafa" }}>
+        <div style={{ display: "flex", gap: 8, padding: "8px 12px", borderTop: "1px solid rgba(255,255,255,0.4)", background: "rgba(255,255,255,0.25)" }}>
           <button
             onClick={publish}
             disabled={busy}
             style={{
               flex: 1,
-              border: "none",
-              background: THEME.accent,
+              border: "1px solid rgba(255,255,255,0.5)",
+              background: THEME.accentGlass,
               color: THEME.accentText,
-              borderRadius: 8,
+              borderRadius: 10,
               padding: "8px 0",
               cursor: "pointer",
               opacity: busy ? 0.5 : 1,
@@ -289,10 +304,10 @@ function ChatPanel({ admin }) {
             disabled={busy}
             style={{
               flex: 1,
-              border: "1px solid #ddd",
-              background: "#fff",
+              border: "1px solid rgba(255,255,255,0.55)",
+              background: "rgba(255,255,255,0.4)",
               color: THEME.text,
-              borderRadius: 8,
+              borderRadius: 10,
               padding: "8px 0",
               cursor: "pointer",
               opacity: busy ? 0.5 : 1,
@@ -303,7 +318,7 @@ function ChatPanel({ admin }) {
         </div>
       )}
 
-      <div style={{ display: "flex", gap: 8, padding: 12, borderTop: "1px solid #eee" }}>
+      <div style={{ display: "flex", gap: 8, padding: 12, borderTop: "1px solid rgba(255,255,255,0.4)" }}>
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
@@ -311,8 +326,9 @@ function ChatPanel({ admin }) {
           placeholder={COPY.placeholder}
           style={{
             flex: 1,
-            border: "1px solid #ddd",
-            borderRadius: 10,
+            border: "1px solid rgba(255,255,255,0.55)",
+            background: "rgba(255,255,255,0.4)",
+            borderRadius: 12,
             padding: "8px 12px",
             fontSize: 14,
             color: THEME.text,
@@ -323,10 +339,10 @@ function ChatPanel({ admin }) {
           onClick={send}
           disabled={busy}
           style={{
-            border: "none",
-            background: THEME.accent,
+            border: "1px solid rgba(255,255,255,0.5)",
+            background: THEME.accentGlass,
             color: THEME.accentText,
-            borderRadius: 10,
+            borderRadius: 12,
             padding: "0 14px",
             cursor: "pointer",
             opacity: busy ? 0.5 : 1,
