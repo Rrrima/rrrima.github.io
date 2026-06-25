@@ -25,6 +25,7 @@ const THEME = {
   glassShadow: "0 8px 32px rgba(31, 122, 170, 0.18)", // soft blue-grey lift
   // Soft blue gradient echoing $bubble-bg / $fairy-color from the site
   accentGlass: "linear-gradient(135deg, rgba(167, 232, 255, 0.85) 0%, rgba(49, 154, 206, 0.85) 100%)",
+  accentFlat: "rgba(49, 154, 206, 0.78)", // flat translucent accent (user bubble)
   botGlass: "rgba(255, 255, 255, 0.45)", // assistant bubble
 };
 
@@ -250,7 +251,7 @@ function ChatPanel({ admin }) {
                 fontSize: 14,
                 lineHeight: 1.4,
                 whiteSpace: "pre-wrap",
-                background: m.role === "user" ? THEME.accentGlass : THEME.botGlass,
+                background: m.role === "user" ? THEME.accentFlat : THEME.botGlass,
                 backdropFilter: "blur(8px)",
                 WebkitBackdropFilter: "blur(8px)",
                 border: "1px solid rgba(255,255,255,0.45)",
