@@ -1,6 +1,18 @@
 // Blog metadata - each blog references its own component file
 const blogData = [
   {
+    // A paper's project page: linked from its entry in Selected Publications
+    // (paperData.js), not listed under Things I'm Poking At.
+    id: "jelly",
+    section: "project",
+    listed: false,
+    title: "Jelly",
+    date: "CHI 2025",
+    excerpt: "generative and malleable user interfaces, built on a task-driven data model.",
+    thumbnail: null,
+    component: "Jelly", // References blogs/Jelly.js
+  },
+  {
     id: "chatlet",
     title: "Chatlet",
     date: "October 21, 2026",

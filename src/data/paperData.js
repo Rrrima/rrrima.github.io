@@ -45,6 +45,7 @@ const paperData = [
     venue: "CHI 2025",
     thumbnail: "/images/thumbnails/jelly.png",
     links: [
+      { label: "project", url: "/project/jelly" },
       { label: "paper", url: "https://dl.acm.org/doi/10.1145/3706598.3713285" },
       { label: "video", url: "https://youtu.be/4T2ZaYowubA" },
       { label: "arxiv", url: "https://arxiv.org/abs/2503.04084" },

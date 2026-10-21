@@ -254,6 +254,46 @@ body {
   color: #a1a1a1;
 }
 
+// Home: "Things I'm Poking At" / "Selected Publications" as two quiet tabs,
+// in the section-title type; the open one is just darker.
+.section-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.section-tab {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: $font-family-base;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a1a1a1;
+  cursor: pointer;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &.active {
+    color: $primary-color;
+  }
+}
+
+.section-tab-panel {
+  animation: section-tab-in 0.35s ease both;
+}
+
+@keyframes section-tab-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+
 .footer {
   bottom: 0;
   width: 100%;
@@ -2339,4 +2379,163 @@ a.chatlet-person:hover span {
   &.is-active .xp-scrub-bar {
     opacity: 1;
   }
+}
+
+// Jelly: the paper's pipeline figure, and Jelly's spec page in a wide frame
+.jl-figure {
+  margin: 1.25rem 0 1.75rem;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    color: #a1a1a1;
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.jl-page {
+  padding-bottom: 7rem;
+}
+
+.jl-types {
+  margin: 0 0 1.75rem;
+
+  figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    color: #a1a1a1;
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.jl-types-img {
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// A type's label, sitting on the paper's own tag for it, in the paper's color.
+// It reads as a button: solid fill, a chevron pointing at the playground below,
+// a lift on hover, and a soft pulse until the reader has clicked one.
+.jl-type {
+  --tone: #4f9fd0;
+  --tone-bg: #e3f1fa;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  transform: translate(-50%, -50%);
+  padding: 0.2rem 0.45rem 0.2rem 0.65rem;
+  border: 1.5px solid var(--tone);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.14);
+  font: 600 0.74rem ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--tone);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+
+  svg {
+    transition: transform 0.25s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background: var(--tone-bg);
+    transform: translate(-50%, -50%) translateY(-2px) scale(1.06);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
+
+    svg {
+      transform: translateY(1px);
+    }
+  }
+
+  &.is-on {
+    background: var(--tone);
+    color: #fff;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--tone) 25%, transparent), 0 4px 12px rgba(15, 23, 42, 0.16);
+  }
+
+  &-orange {
+    --tone: #e08a3c;
+    --tone-bg: #fdebd9;
+  }
+
+  &-purple {
+    --tone: #9a6bbb;
+    --tone-bg: #f1e6f7;
+  }
+
+  &-green {
+    --tone: #3a9e62;
+    --tone-bg: #e0f3e7;
+  }
+}
+
+.jl-types-img.is-inviting .jl-type:not(.is-on)::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 var(--tone);
+  animation: jl-type-pulse 2.4s ease-out infinite;
+  animation-delay: calc(var(--i) * 0.3s);
+  pointer-events: none;
+}
+
+@keyframes jl-type-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--tone) 45%, transparent);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 9px color-mix(in srgb, var(--tone) 0%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jl-types-img.is-inviting .jl-type::after {
+    animation: none;
+  }
+}
+
+.jl-types figcaption strong {
+  font-style: normal;
+  font-weight: 600;
+  color: #777;
+}
+
+.jl-spec {
+  margin: 1.25rem 0 2rem;
+
+  iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    transition: height 0.25s ease;
+  }
+}
+
+.chatlet-initials {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #eef1f5;
+  color: #8a8f98;
+  font-style: normal;
+  font-size: 1.1rem;
 }

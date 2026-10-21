@@ -17,7 +17,7 @@ function AppContent() {
   const location = useLocation();
 
   // Check if we're on a blog post page
-  const isBlogPost = location.pathname.startsWith("/blog/");
+  const isBlogPost = /^\/(blog|project)\//.test(location.pathname);
 
   // Scroll to top when route changes
   useEffect(() => {
@@ -44,6 +44,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/project/:id" element={<BlogPost />} />
       </Routes>
       {!isBlogPost && <Footer />}
       {/* <Cursor /> */}

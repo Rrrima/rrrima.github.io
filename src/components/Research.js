@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Paper from "./Paper";
+import { BlogsList } from "./Blogs";
 import paperData from "../data/paperData";
 
+// Two tabs under My Research: what I'm poking at now, and the papers.
+const TABS = [
+  { id: "poking", label: "Things I'm Poking At" },
+  { id: "papers", label: "Selected Publications" },
+];
+
 const Research = () => {
+  const [tab, setTab] = useState("poking");
   return (
     <div className="research">
       <div className="research-content">
@@ -16,11 +24,29 @@ const Research = () => {
             align with human thinking processes.
           </p>
         </div>
-        <h2 className="research-title">Selected Publications</h2>
-        <div className="papers-list">
-          {paperData.map((paper) => (
-            <Paper key={paper.id} paper={paper} />
+        <div className="section-tabs" role="tablist">
+          {TABS.map((t) => (
+            <button
+              key={t.id}
+              role="tab"
+              aria-selected={tab === t.id}
+              className={`section-tab${tab === t.id ? " active" : ""}`}
+              onClick={() => setTab(t.id)}
+            >
+              {t.label}
+            </button>
           ))}
+        </div>
+        <div className="section-tab-panel" key={tab} role="tabpanel">
+          {tab === "poking" ? (
+            <BlogsList />
+          ) : (
+            <div className="papers-list">
+              {paperData.map((paper) => (
+                <Paper key={paper.id} paper={paper} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

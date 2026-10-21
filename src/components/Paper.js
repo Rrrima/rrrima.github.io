@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Paper = ({ paper }) => {
   const { title, authors, venue, thumbnail, links, award } = paper;
@@ -36,7 +37,12 @@ const Paper = ({ paper }) => {
           <p className="paper-authors">{renderAuthors()}</p>
 
           <div className="paper-links">
-            {links.map((link, index) => (
+            {links.map((link, index) =>
+              link.url.startsWith("/") ? (
+                <Link key={index} to={link.url} className="paper-link">
+                  {link.label}
+                </Link>
+              ) : (
               <a
                 key={index}
                 href={link.url}
@@ -46,7 +52,8 @@ const Paper = ({ paper }) => {
               >
                 {link.label}
               </a>
-            ))}
+              )
+            )}
           </div>
         </div>
       </div>
