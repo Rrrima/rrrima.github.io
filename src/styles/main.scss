@@ -824,6 +824,26 @@ body {
   direction: rtl; // Right-to-left to move scrollbar to left
   overscroll-behavior: contain; // Prevent scroll chaining to parent
 
+  // Fade out the bottom edge of the content; lifted once scrolled to the end.
+  // Two mask layers: a gradient over the content, and a solid strip over the
+  // scrollbar column (on the left, due to direction: rtl) so it is not faded.
+  $scrollbar-w: 3px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%),
+    linear-gradient(#000, #000);
+  mask-image: linear-gradient(to bottom, #000 70%, transparent 100%),
+    linear-gradient(#000, #000);
+  -webkit-mask-size: calc(100% - #{$scrollbar-w}) 100%, #{$scrollbar-w} 100%;
+  mask-size: calc(100% - #{$scrollbar-w}) 100%, #{$scrollbar-w} 100%;
+  -webkit-mask-position: right top, left top;
+  mask-position: right top, left top;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  &.at-bottom {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
   // Reset text direction for content
   & > * {
     direction: ltr;
@@ -834,55 +854,39 @@ body {
     overscroll-behavior: contain;
   }
 
-  // Transparent liquid-like scrollbar styling
+  // Slim scrollbar, hidden until the area is hovered
   &::-webkit-scrollbar {
-    width: 1px;
+    width: 3px;
   }
 
   &::-webkit-scrollbar-track {
     background: transparent;
-    border-radius: 1.5px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      135deg,
-      rgba(49, 154, 206, 0.1),
-      rgba(49, 154, 206, 0.15)
-    );
-    border-radius: 1.5px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: rgba(49, 154, 206, 0.3);
+  }
+
+  &.at-bottom:hover::-webkit-scrollbar-thumb {
+    background: rgba(49, 154, 206, 0.15);
+  }
+
+  // Firefox only: setting scrollbar-width in Chrome disables the
+  // ::-webkit-scrollbar rules above, so scope it to non-webkit browsers
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
 
     &:hover {
-      background: linear-gradient(
-        135deg,
-        rgba(49, 154, 206, 0.2),
-        rgba(49, 154, 206, 0.25)
-      );
-      transform: scaleX(1.2);
+      scrollbar-color: rgba(49, 154, 206, 0.3) transparent;
     }
   }
-
-  // Squeeze animation when scrolling to bottom
-  &:hover::-webkit-scrollbar-thumb {
-    transform: scaleX(1.1);
-  }
-
-  // Squeeze animation when at bottom
-  &.at-bottom::-webkit-scrollbar-thumb {
-    transform: scaleX(0.8);
-    background: linear-gradient(
-      135deg,
-      rgba(49, 154, 206, 0.05),
-      rgba(49, 154, 206, 0.1)
-    );
-  }
-
-  // Firefox scrollbar styling
-  scrollbar-width: thin;
-  scrollbar-color: rgba(49, 154, 206, 0.15) transparent;
 }
 
 .activity-item-inline {

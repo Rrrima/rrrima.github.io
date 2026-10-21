@@ -9,16 +9,11 @@ const Research = () => {
         <div className="hero-text">
           <p className="hero-caption2">My Research</p>
           <p>
-            Our digital workspaces should not remain static backdrops to our
-            activity—they should evolve with us: responsive to our dynamic and
-            personalized needs. I am interested in exploring the fundamental
-            components of our current interfaces and examining how they can be
-            reimagined to better align with human thinking processes.
-          </p>
-          <p>
-            My Ph.D research focuses on how computational structures, as one of
-            the foundamental components, can be generated, composed, and
-            synchronized to support complex information activities.
+            I work on generative UIs and dynamic interfaces, with the belief
+            that computers should help humans think better, not just get things
+            done. My research focuses on the fundamental components of our
+            current interfaces - explores how they can be reimagined to better
+            align with human thinking processes.
           </p>
         </div>
         <h2 className="research-title">Selected Publications</h2>

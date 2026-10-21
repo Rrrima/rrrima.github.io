@@ -1,10 +1,20 @@
 {
   "activities": [
     {
-      "time": "2026.5.12",
+      "time": "2026.10",
       "tags": ["now & Then"],
-      "content": "Defended my Ph.D. dissertation: Generative and Composable User Interfaces via Task Structures",
+      "content": "Updated with the report on our Generative UI workshop https://genuimeetshci.github.io/chi26-workshop/",
       "iscurrent": true
+    },
+    {
+      "time": "2026.8 - 2026.9",
+      "tags": ["now & Then"],
+      "content": "Building a personal computing environment: Aware (more to come)"
+    },
+    {
+      "time": "2026.5",
+      "tags": ["now & Then"],
+      "content": "Defended my Ph.D. dissertation: Generative and Composable User Interfaces via Task Structures"
     },
     {
       "time": "2026.4",

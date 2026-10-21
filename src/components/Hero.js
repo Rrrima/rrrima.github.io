@@ -68,7 +68,8 @@ const Hero = () => {
           <div className="hero-text hero-intro">
             <p className="hero-caption">ABOUT ME</p>
             <p id="current-intro-text">
-              Hi, I am currently a 5th year Ph.D. student in{" "}
+              I am an (incoming) research scientist at Adobe Research - just
+              finished my Ph.D. at{" "}
               <a
                 href="https://hci.ucsd.edu/"
                 className="hero-lab-link"
@@ -77,8 +78,7 @@ const Hero = () => {
               >
                 Foundation Interface Lab
               </a>{" "}
-              at University of California, San Diego, advised by Professor
-              Haijun Xia.
+              at University of California, San Diego.
             </p>
             <ActivityLog />
           </div>
