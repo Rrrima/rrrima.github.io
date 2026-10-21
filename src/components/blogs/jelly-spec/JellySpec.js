@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ChevronDown } from "lucide-react";
 
 // The paper's attribute-types figure, with the four types the playground uses
 // labeled on it, above Jelly's schema-labels playground (the real one, built from
@@ -58,7 +57,6 @@ export default function JellySpec() {
               title={`${t.paper} in the paper: open "${t.tab}" below`}
             >
               {t.tab}
-              <ChevronDown size={12} strokeWidth={2.5} aria-hidden="true" />
             </button>
           ))}
         </div>

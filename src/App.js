@@ -48,7 +48,8 @@ function AppContent() {
       </Routes>
       {!isBlogPost && <Footer />}
       {/* <Cursor /> */}
-      <div className="container-overlay"></div>
+      {/* The home page's tint; posts and project pages show at full color. */}
+      {!isBlogPost && <div className="container-overlay"></div>}
     </div>
   );
 }
