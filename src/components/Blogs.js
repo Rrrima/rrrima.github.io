@@ -6,7 +6,7 @@ const Blogs = () => {
   return (
     <div className="blogs">
       <div className="blogs-content">
-        <h2 className="research-title">Before I Forget...</h2>
+        <h2 className="research-title">Things I'm Poking At</h2>
         {blogData.length === 0 ? (
           <p className="blogs-empty-message">
             Coming soon! Stay tuned for updates.

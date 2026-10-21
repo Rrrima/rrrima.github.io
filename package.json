@@ -25,7 +25,7 @@
   "reactSnap": {
     "include": [
       "/",
-      "/blog/proactive-assistance"
+      "/blog/proactive-assistance", "/blog/chatlet", "/blog/explorables"
     ],
     "minifyHtml": {
       "collapseWhitespace": false,

@@ -5,10 +5,14 @@ import blogData from "../data/blogData";
 
 // Import all blog components
 import ProactiveAssistance from "./blogs/ProactiveAssistance";
+import Chatlet from "./blogs/Chatlet";
+import Explorables from "./blogs/Explorables";
 
 // Map component names to actual components
 const blogComponents = {
   ProactiveAssistance: ProactiveAssistance,
+  Chatlet: Chatlet,
+  Explorables: Explorables,
   // Add more blog components here as you create them
   // AnotherBlog: AnotherBlog,
 };
