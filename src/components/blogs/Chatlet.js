@@ -59,6 +59,17 @@ const Chatlet = () => (
       })}
     </div>
 
+    <p className="chatlet-ack">
+      This research is sponsored by a{" "}
+      <a
+        href="https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/fellows/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Microsoft Research Fellowship
+      </a>
+      .
+    </p>
     <div className="chatlet-links">
       <a href="https://chatlet-signup.fly.dev/?ref=website" target="_blank" rel="noopener noreferrer">Try it out (sign up for early access) <ArrowUpRight size={15} /></a>
     </div>
@@ -163,6 +174,7 @@ const Chatlet = () => (
         </ChatletPet>
       </div>
     </Section>
+
   </div>
 );
 
