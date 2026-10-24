@@ -38,8 +38,16 @@ const Paper = ({ paper }) => {
 
           <div className="paper-links">
             {links.map((link, index) =>
-              link.url.startsWith("/") ? (
-                <Link key={index} to={link.url} className="paper-link">
+              // Site pages go through the router; files like PDFs need a real link.
+              link.url.startsWith("/") && !link.url.endsWith(".pdf") ? (
+                <Link
+                  key={index}
+                  to={link.url}
+                  className="paper-link"
+                  data-umami-event="paper-click"
+                  data-umami-event-paper={title}
+                  data-umami-event-link={link.label}
+                >
                   {link.label}
                 </Link>
               ) : (
@@ -49,6 +57,9 @@ const Paper = ({ paper }) => {
                 className="paper-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-umami-event="paper-click"
+                data-umami-event-paper={title}
+                data-umami-event-link={link.label}
               >
                 {link.label}
               </a>

@@ -16,6 +16,8 @@ const Hero = () => {
             <div className="hero-contact">
               <a
                 href="https://scholar.google.com/citations?user=RXdvYDoAAAAJ&hl=en&oi=ao"
+                data-umami-event="outbound-click"
+                data-umami-event-to="scholar"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -25,6 +27,8 @@ const Hero = () => {
             <div className="hero-contact">
               <a
                 href="https://www.linkedin.com/in/yining-rima-cao-7141a6198/"
+                data-umami-event="outbound-click"
+                data-umami-event-to="linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -34,6 +38,8 @@ const Hero = () => {
             <div className="hero-contact">
               <a
                 href="https://x.com/YiningCao3"
+                data-umami-event="outbound-click"
+                data-umami-event-to="x"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -43,6 +49,8 @@ const Hero = () => {
             <div className="hero-contact">
               <a
                 href="https://github.com/Rrrima"
+                data-umami-event="outbound-click"
+                data-umami-event-to="github"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -50,13 +58,20 @@ const Hero = () => {
               </a>
             </div>
             <div className="hero-contact">
-              <a href="/rima-cv.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                href="/rima-cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-umami-event="cv-download"
+              >
                 CV
               </a>
             </div>
             <div className="hero-contact">
               <a
                 href="https://rrrima.github.io/"
+                data-umami-event="outbound-click"
+                data-umami-event-to="old-website"
                 target="_blank"
                 rel="noopener noreferrer"
               >

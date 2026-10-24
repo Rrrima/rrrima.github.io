@@ -24,6 +24,7 @@ const BlogPost = () => {
   const blog = blogData.find((b) => b.id === id);
   const [showTitleInHeader, setShowTitleInHeader] = useState(false);
   const titleRef = useRef(null);
+  const endRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +38,21 @@ const BlogPost = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Report to Umami once per visit when the reader reaches the end of the post
+  useEffect(() => {
+    const end = endRef.current;
+    if (!end) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        window.umami?.track("read-complete", { post: id });
+        observer.disconnect();
+      }
+    });
+    observer.observe(end);
+    return () => observer.disconnect();
+  }, [id]);
 
   if (!blog) {
     return (
@@ -119,6 +135,7 @@ const BlogPost = () => {
             <p>Blog content coming soon...</p>
           )}
         </div>
+        <div ref={endRef} aria-hidden="true" />
       </div>
     </div>
   );
