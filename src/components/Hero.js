@@ -37,7 +37,7 @@ const Hero = () => {
             </div>
             <div className="hero-contact">
               <a
-                href="https://x.com/YiningCao3"
+                href="https://x.com/rrrima_"
                 data-umami-event="outbound-click"
                 data-umami-event-to="x"
                 target="_blank"
