@@ -8,6 +8,7 @@ import ProactiveAssistance from "./blogs/ProactiveAssistance";
 import Chatlet from "./blogs/Chatlet";
 import Explorables from "./blogs/Explorables";
 import Jelly from "./blogs/Jelly";
+import Dissertation from "./blogs/Dissertation";
 
 // Map component names to actual components
 const blogComponents = {
@@ -15,6 +16,7 @@ const blogComponents = {
   Chatlet: Chatlet,
   Explorables: Explorables,
   Jelly: Jelly,
+  Dissertation: Dissertation,
   // Add more blog components here as you create them
   // AnotherBlog: AnotherBlog,
 };

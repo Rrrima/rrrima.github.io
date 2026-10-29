@@ -3,14 +3,14 @@ import Paper from "./Paper";
 import { BlogsList } from "./Blogs";
 import paperData from "../data/paperData";
 
-// Two tabs under My Research: what I'm poking at now, and the papers.
+// Two tabs under My Research: the papers, and what I want to write down before I forget.
 const TABS = [
-  { id: "poking", label: "Things I'm Poking At" },
   { id: "papers", label: "Selected Publications" },
+  { id: "poking", label: "Before I Forgot" },
 ];
 
 const Research = () => {
-  const [tab, setTab] = useState("poking");
+  const [tab, setTab] = useState("papers");
   return (
     <div className="research">
       <div className="research-content">

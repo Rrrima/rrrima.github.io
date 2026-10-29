@@ -2,7 +2,7 @@
 const blogData = [
   {
     // A paper's project page: linked from its entry in Selected Publications
-    // (paperData.js), not listed under Things I'm Poking At.
+    // (paperData.js), not listed under Before I Forgot.
     id: "jelly",
     section: "project",
     listed: false,
@@ -11,6 +11,14 @@ const blogData = [
     excerpt: "generative and malleable user interfaces, built on a task-driven data model.",
     thumbnail: null,
     component: "Jelly", // References blogs/Jelly.js
+  },
+  {
+    id: "dissertation",
+    title: "Generative and Composable User Interfaces via Task Structures",
+    date: "October 28, 2026",
+    excerpt: "my dissertation talk, the short version: from the history of GUIs to interfaces generated from task structures.",
+    thumbnail: null,
+    component: "Dissertation", // References blogs/Dissertation.js
   },
   {
     id: "chatlet",

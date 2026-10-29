@@ -92,3 +92,60 @@ export const MarginNote = ({ children, id }) => {
     </>
   );
 };
+
+// The "Contents" sidebar: lists the sections and marks the one being read.
+export const TableOfContents = ({ sections }) => {
+  const [active, setActive] = React.useState("");
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 200;
+      if (nearBottom) {
+        setActive(sections[sections.length - 1].id);
+        return;
+      }
+      const y = window.scrollY + 150;
+      const current = [...sections]
+        .reverse()
+        .find((s) => {
+          const el = document.getElementById(s.id);
+          return el && y >= el.offsetTop - 100;
+        });
+      setActive(current ? current.id : "");
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [sections]);
+
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: "smooth" });
+  };
+
+  return (
+    <nav className="blog-toc">
+      <div className="toc-content">
+        <h3 className="toc-title">Contents</h3>
+        <ul className="toc-list">
+          {sections.map((s) => (
+            <li key={s.id} className={active === s.id ? "active" : ""}>
+              <a
+                href={`#${s.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo(s.id);
+                }}
+              >
+                {s.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  );
+};
