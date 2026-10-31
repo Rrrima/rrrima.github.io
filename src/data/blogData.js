@@ -14,6 +14,7 @@ const blogData = [
   },
   {
     id: "dissertation",
+    listed: false,
     title: "Generative and Composable User Interfaces via Task Structures",
     date: "October 28, 2026",
     excerpt: "my dissertation talk, the short version: from the history of GUIs to interfaces generated from task structures.",
