@@ -2,6 +2,13 @@
   command = "npm run build"
   publish = "build"
 
+# Fairy Cursor's page and download live in their own repo (github pages); serve them here.
+[[redirects]]
+  from = "/fairy-cursor/*"
+  to = "https://rrrima.github.io/fairy-cursor/:splat"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
