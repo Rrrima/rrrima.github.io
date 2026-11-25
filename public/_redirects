@@ -1,2 +1,5 @@
-/*    /index.html   200
+# fairy cursor lives in its own repo (github pages). this file is read before netlify.toml,
+# so the rule has to be here, above the catch-all.
+/fairy-cursor/*    https://rrrima.github.io/fairy-cursor/:splat   200!
 
+/*    /index.html   200
