@@ -83,7 +83,7 @@ const Hero = () => {
           <div className="hero-text hero-intro">
             <p className="hero-caption">ABOUT ME</p>
             <p id="current-intro-text">
-              I am an (incoming) research scientist at Adobe Research - just
+              I am a research scientist at Adobe Research - just
               finished my Ph.D. at{" "}
               <a
                 href="https://hci.ucsd.edu/"
