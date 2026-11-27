@@ -3,7 +3,13 @@
     {
       "time": "2026.11",
       "tags": ["now & Then"],
-      "content": "Open-sourced AUSM https://foundation-interface.github.io/ausm/ and released Fairy Cursor {fairy-cursor}, try it here https://rrrima.me/fairy-cursor/",
+      "content": "Released Fairy Cursor {fairy-cursor}, try it here https://rrrima.me/fairy-cursor/",
+      "iscurrent": true
+    },
+    {
+      "time": "2026.11",
+      "tags": ["now & Then"],
+      "content": "Open-sourced AUSM: your activity on the Mac, as live context for apps and agents https://foundation-interface.github.io/ausm/",
       "iscurrent": true
     },
     {
