@@ -1,10 +1,15 @@
 {
   "activities": [
     {
+      "time": "2026.11",
+      "tags": ["now & Then"],
+      "content": "Open-sourced AUSM https://foundation-interface.github.io/ausm/ and released Fairy Cursor {fairy-cursor}, try it here https://rrrima.me/fairy-cursor/",
+      "iscurrent": true
+    },
+    {
       "time": "2026.10",
       "tags": ["now & Then"],
-      "content": "Updated with the report on our Generative UI workshop https://genuimeetshci.github.io/chi26-workshop/",
-      "iscurrent": true
+      "content": "Updated with the report on our Generative UI workshop https://genuimeetshci.github.io/chi26-workshop/"
     },
     {
       "time": "2025 - ongoing",

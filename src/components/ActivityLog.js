@@ -24,9 +24,25 @@ const ActivityLog = () => {
   // Function to render content with hyperlinks as icon buttons
   const renderContent = (content) => {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const parts = content.split(urlRegex);
-    
+    // "{fairy-cursor}" in an entry is the app's little mark, set in the line like a letter.
+    const parts = content.split(/(https?:\/\/[^\s]+|\{fairy-cursor\})/g);
+
     return parts.map((part, index) => {
+      if (part === "{fairy-cursor}") {
+        return (
+          <img
+            key={index}
+            src="/images/fairy-cursor.png"
+            alt=""
+            style={{
+              width: "1.05em",
+              height: "1.05em",
+              verticalAlign: "-0.18em",
+              marginLeft: "0.05em",
+            }}
+          />
+        );
+      }
       if (part.match(urlRegex)) {
         return (
           <a
